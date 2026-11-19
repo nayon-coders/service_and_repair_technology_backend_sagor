@@ -17,7 +17,11 @@ app.use(
       if (!origin) return callback(null, true);
 
       const allowedOrigins = [env.frontendUrl, 'http://localhost:5173', 'http://127.0.0.1:5173'];
-      if (allowedOrigins.includes(origin) || env.nodeEnv === 'development') {
+      if (
+        allowedOrigins.includes(origin) ||
+        origin.endsWith('.vercel.app') ||
+        env.nodeEnv === 'development'
+      ) {
         return callback(null, true);
       }
       return callback(new Error('Blocked by CORS policy'));
