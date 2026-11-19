@@ -1,6 +1,8 @@
 import express, { Application } from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import path from 'path';
+import fs from 'fs';
 import { env } from './config/environment';
 import { requestLogger } from './middleware/logger';
 import { notFoundHandler } from './middleware/notFoundHandler';
@@ -42,6 +44,18 @@ app.use(requestLogger);
 
 // API route registration
 app.use('/api/v1', apiRoutes);
+
+// Static frontend serving for Desktop standalone mode (if frontend/dist exists)
+const frontendDistPath = path.resolve(__dirname, '../../frontend/dist');
+if (fs.existsSync(frontendDistPath)) {
+  app.use(express.static(frontendDistPath));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api/')) {
+      return next();
+    }
+    res.sendFile(path.join(frontendDistPath, 'index.html'));
+  });
+}
 
 // 404 fallback handler
 app.use(notFoundHandler);
