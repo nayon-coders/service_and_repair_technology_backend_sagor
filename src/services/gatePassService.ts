@@ -1,5 +1,6 @@
 import { prisma } from '../config/prisma';
-import { GatePass, GatePassItem, Prisma, CustomerType, GatePassType, GatePassStatus, ChallanKind } from '@prisma/client';
+import { GatePass, GatePassItem, Prisma } from '@prisma/client';
+import { CustomerType, GatePassType, GatePassStatus, ChallanKind } from '../types';
 import { 
   CreateGatePassInput, 
   UpdateGatePassInput, 

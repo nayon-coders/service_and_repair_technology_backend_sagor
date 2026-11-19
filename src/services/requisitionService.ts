@@ -1,5 +1,6 @@
 import { prisma } from '../config/prisma';
-import { Requisition, RequisitionItem, Prisma, CustomerType, RequisitionStatus, RequisitionItemCategory } from '@prisma/client';
+import { Requisition, RequisitionItem, Prisma } from '@prisma/client';
+import { CustomerType, RequisitionStatus, RequisitionItemCategory } from '../types';
 import { 
   CreateRequisitionInput, 
   UpdateRequisitionInput, 

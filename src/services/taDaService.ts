@@ -1,5 +1,6 @@
 import { prisma } from '../config/prisma';
-import { TaDaBill, TaDaItem, Prisma, TaDaStatus } from '@prisma/client';
+import { TaDaBill, TaDaItem, Prisma } from '@prisma/client';
+import { TaDaStatus } from '../types';
 import { 
   CreateTaDaBillInput, 
   UpdateTaDaBillInput, 

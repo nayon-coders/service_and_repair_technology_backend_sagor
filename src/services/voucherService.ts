@@ -1,5 +1,6 @@
 import { prisma } from '../config/prisma';
-import { BillVoucher, BillVoucherItem, Prisma, CustomerType, BillType, VoucherPaymentStatus, VoucherPaymentMethod } from '@prisma/client';
+import { BillVoucher, BillVoucherItem, Prisma } from '@prisma/client';
+import { CustomerType, BillType, VoucherPaymentStatus, VoucherPaymentMethod } from '../types';
 import { 
   CreateBillVoucherInput, 
   UpdateBillVoucherInput, 

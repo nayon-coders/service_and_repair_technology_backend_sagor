@@ -1,19 +1,18 @@
 datasource db {
-  provider = "mysql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../backend/node_modules/.prisma/client"
 }
 
 // Foundational System Configuration (Non-business)
 model SystemSetting {
   id          String   @id @default(cuid())
   key         String   @unique
-  value       String   @db.Text
-  description String?  @db.VarChar(255)
+  value       String   
+  description String?  
   createdAt   DateTime @default(now()) @map("created_at")
   updatedAt   DateTime @updatedAt @map("updated_at")
 
@@ -21,20 +20,14 @@ model SystemSetting {
 }
 
 // Role Type Enum (Preserved for compatibility)
-enum RoleType {
-  SUPER_ADMIN
-  ADMIN
-  MANAGER
-  EMPLOYEE
-}
 
 // User / Admin Model
 model User {
   id        String    @id @default(cuid())
-  name      String    @db.VarChar(100)
-  email     String    @unique @db.VarChar(191)
-  password  String    @db.VarChar(255)
-  roleEnum  RoleType? @map("role")
+  name      String    
+  email     String    @unique 
+  password  String    
+  roleEnum  String? @map("role")
   roleId    String?   @map("role_id")
   role      Role?     @relation(fields: [roleId], references: [id], onDelete: SetNull)
   isActive  Boolean   @default(true) @map("is_active")
@@ -60,8 +53,8 @@ model User {
 // Role Model
 model Role {
   id              String           @id @default(cuid())
-  name            String           @unique @db.VarChar(50)
-  description     String?          @db.VarChar(255)
+  name            String           @unique 
+  description     String?          
   isActive        Boolean          @default(true) @map("is_active")
   createdAt       DateTime         @default(now()) @map("created_at")
   updatedAt       DateTime         @updatedAt @map("updated_at")
@@ -75,9 +68,9 @@ model Role {
 // Permission Model
 model Permission {
   id              String           @id @default(cuid())
-  name            String           @db.VarChar(100)
-  key             String           @unique @db.VarChar(100)
-  description     String?          @db.VarChar(255)
+  name            String           
+  key             String           @unique 
+  description     String?          
   createdAt       DateTime         @default(now()) @map("created_at")
   updatedAt       DateTime         @updatedAt @map("updated_at")
 
@@ -105,14 +98,14 @@ model RolePermission {
 // Navigation Menu Model with Self-Referencing Hierarchy
 model NavigationMenu {
   id                 String           @id @default(cuid())
-  title              String           @db.VarChar(100)
-  key                String           @unique @db.VarChar(100)
-  path               String?          @db.VarChar(255)
-  icon               String           @db.VarChar(50)
+  title              String           
+  key                String           @unique 
+  path               String?          
+  icon               String           
   parentId           String?          @map("parent_id")
   sortOrder          Int              @default(0) @map("sort_order")
   isActive           Boolean          @default(true) @map("is_active")
-  requiredPermission String?          @map("required_permission") @db.VarChar(100)
+  requiredPermission String?          @map("required_permission") 
   createdAt          DateTime         @default(now()) @map("created_at")
   updatedAt          DateTime         @updatedAt @map("updated_at")
 
@@ -125,19 +118,15 @@ model NavigationMenu {
 }
 
 // Payment Status Enum
-enum PaymentStatus {
-  PAID
-  UNPAID
-}
 
 // Income Model (Management -> Income)
 model Income {
   id                 String        @id @default(cuid())
-  date               DateTime      @db.Date
-  companyOrStoreName String        @map("company_or_store_name") @db.VarChar(255)
-  amount             Decimal       @db.Decimal(12, 2)
-  status             PaymentStatus @default(PAID)
-  remarks            String?       @db.Text
+  date               DateTime      
+  companyOrStoreName String        @map("company_or_store_name") 
+  amount             Decimal       
+  status             String @default("PAID")
+  remarks            String?       
   createdById        String?       @map("created_by_id")
   createdBy          User?         @relation(fields: [createdById], references: [id], onDelete: SetNull)
   createdAt          DateTime      @default(now()) @map("created_at")
@@ -152,12 +141,12 @@ model Income {
 // Expense Model (Management -> Expense)
 model Expense {
   id                 String        @id @default(cuid())
-  date               DateTime      @db.Date
-  companyOrStoreName String        @map("company_or_store_name") @db.VarChar(255)
-  amount             Decimal       @db.Decimal(12, 2)
-  status             PaymentStatus @default(PAID)
-  category           String?       @db.VarChar(100)
-  remarks            String?       @db.Text
+  date               DateTime      
+  companyOrStoreName String        @map("company_or_store_name") 
+  amount             Decimal       
+  status             String @default("PAID")
+  category           String?       
+  remarks            String?       
   createdById        String?       @map("created_by_id")
   createdBy          User?         @relation(fields: [createdById], references: [id], onDelete: SetNull)
   createdAt          DateTime      @default(now()) @map("created_at")
@@ -171,64 +160,41 @@ model Expense {
 }
 
 // Bill Voucher Enums
-enum BillType {
-  REPAIR
-  SERVICE
-  BOTH
-}
-
-enum CustomerType {
-  CORPORATE
-  NON_CORPORATE
-}
-
-enum VoucherPaymentStatus {
-  PAID
-  DUE
-  PARTIAL
-}
-
-enum VoucherPaymentMethod {
-  CASH
-  BANK
-  BKASH
-  OTHER
-}
 
 // Bill Voucher Model (Customer -> Corporate / Non-Corporate -> Bill)
 model BillVoucher {
   id                 String               @id @default(cuid())
-  voucherNo          String               @unique @map("voucher_no") @db.VarChar(50)
-  date               DateTime             @db.Date
-  customerType       CustomerType         @default(CORPORATE) @map("customer_type")
-  billType           BillType             @default(REPAIR) @map("bill_type")
-  customerName       String               @map("customer_name") @db.VarChar(255)
-  mobile             String?              @db.VarChar(50)
-  address            String?              @db.Text
+  voucherNo          String               @unique @map("voucher_no") 
+  date               DateTime             
+  customerType       String         @default("CORPORATE") @map("customer_type")
+  billType           String             @default("REPAIR") @map("bill_type")
+  customerName       String               @map("customer_name") 
+  mobile             String?              
+  address            String?              
 
   // Machine Information
-  machineName        String?              @map("machine_name") @db.VarChar(255)
-  brandModel         String?              @map("brand_model") @db.VarChar(255)
-  serialNo           String?              @map("serial_no") @db.VarChar(100)
-  department         String?              @db.VarChar(100)
-  problemComplaint   String?              @map("problem_complaint") @db.Text
-  receivedDate       DateTime?            @map("received_date") @db.Date
+  machineName        String?              @map("machine_name") 
+  brandModel         String?              @map("brand_model") 
+  serialNo           String?              @map("serial_no") 
+  department         String?              
+  problemComplaint   String?              @map("problem_complaint") 
+  receivedDate       DateTime?            @map("received_date") 
 
   // Financial Totals
-  partsTotal         Decimal              @default(0) @map("parts_total") @db.Decimal(12, 2)
-  serviceCharge      Decimal              @default(0) @map("service_charge") @db.Decimal(12, 2)
-  discount           Decimal              @default(0) @db.Decimal(12, 2)
-  grandTotal         Decimal              @default(0) @map("grand_total") @db.Decimal(12, 2)
-  paidAmount         Decimal              @default(0) @map("paid_amount") @db.Decimal(12, 2)
-  dueAmount          Decimal              @default(0) @map("due_amount") @db.Decimal(12, 2)
-  amountInWords      String?              @map("amount_in_words") @db.VarChar(255)
-  warrantyTerms      String?              @map("warranty_terms") @db.VarChar(255)
+  partsTotal         Decimal              @default(0) @map("parts_total") 
+  serviceCharge      Decimal              @default(0) @map("service_charge") 
+  discount           Decimal              @default(0) 
+  grandTotal         Decimal              @default(0) @map("grand_total") 
+  paidAmount         Decimal              @default(0) @map("paid_amount") 
+  dueAmount          Decimal              @default(0) @map("due_amount") 
+  amountInWords      String?              @map("amount_in_words") 
+  warrantyTerms      String?              @map("warranty_terms") 
 
   // Payment Metadata
-  paymentStatus      VoucherPaymentStatus @default(DUE) @map("payment_status")
-  paymentMethod      VoucherPaymentMethod @default(CASH) @map("payment_method")
-  paymentMethodOther String?              @map("payment_method_other") @db.VarChar(100)
-  preparedBy         String?              @map("prepared_by") @db.VarChar(100)
+  paymentStatus      String @default("DUE") @map("payment_status")
+  paymentMethod      String @default("CASH") @map("payment_method")
+  paymentMethodOther String?              @map("payment_method_other") 
+  preparedBy         String?              @map("prepared_by") 
 
   // Items Relation
   items              BillVoucherItem[]
@@ -252,62 +218,51 @@ model BillVoucherItem {
   voucherId   String      @map("voucher_id")
   voucher     BillVoucher @relation(fields: [voucherId], references: [id], onDelete: Cascade)
   sl          Int         @default(1)
-  description String      @db.VarChar(255)
-  qty         Decimal     @default(1) @db.Decimal(10, 2)
-  unitPrice   Decimal     @default(0) @map("unit_price") @db.Decimal(12, 2)
-  amount      Decimal     @default(0) @db.Decimal(12, 2)
-  remarks     String?     @db.VarChar(100)
+  description String      
+  qty         Decimal     @default(1) 
+  unitPrice   Decimal     @default(0) @map("unit_price") 
+  amount      Decimal     @default(0) 
+  remarks     String?     
 
   @@index([voucherId])
   @@map("bill_voucher_items")
 }
 
 // Requisition / Repair Cost Estimate Models
-enum RequisitionItemCategory {
-  SPARE_PARTS
-  SERVICE_LABOUR
-}
-
-enum RequisitionStatus {
-  PENDING
-  APPROVED
-  REJECTED
-  COMPLETED
-}
 
 model Requisition {
   id                   String                  @id @default(cuid())
-  estimateNo           String                  @unique @map("estimate_no") @db.VarChar(50)
-  date                 DateTime                @db.Date
-  validUpTo            DateTime?               @map("valid_up_to") @db.Date
-  customerType         CustomerType            @default(CORPORATE) @map("customer_type")
+  estimateNo           String                  @unique @map("estimate_no") 
+  date                 DateTime                
+  validUpTo            DateTime?               @map("valid_up_to") 
+  customerType         String            @default("CORPORATE") @map("customer_type")
   
   // Customer Information
-  organizationName     String                  @map("organization_name") @db.VarChar(255)
-  departmentWard       String?                 @map("department_ward") @db.VarChar(100)
-  contactPerson        String?                 @map("contact_person") @db.VarChar(100)
-  contactNo            String?                 @map("contact_no") @db.VarChar(50)
+  organizationName     String                  @map("organization_name") 
+  departmentWard       String?                 @map("department_ward") 
+  contactPerson        String?                 @map("contact_person") 
+  contactNo            String?                 @map("contact_no") 
 
   // Equipment Details
-  equipmentName        String?                 @map("equipment_name") @db.VarChar(255)
-  brand                String?                 @db.VarChar(100)
-  model                String?                 @db.VarChar(100)
-  serialNo             String?                 @map("serial_no") @db.VarChar(100)
+  equipmentName        String?                 @map("equipment_name") 
+  brand                String?                 
+  model                String?                 
+  serialNo             String?                 @map("serial_no") 
 
   // Fault Description
-  faultDescription     String?                 @map("fault_description") @db.Text
+  faultDescription     String?                 @map("fault_description") 
 
   // Financial Breakdown
-  sparePartsTotal      Decimal                 @default(0) @map("spare_parts_total") @db.Decimal(12, 2)
-  serviceLabourTotal   Decimal                 @default(0) @map("service_labour_total") @db.Decimal(12, 2)
-  subTotal             Decimal                 @default(0) @map("sub_total") @db.Decimal(12, 2)
-  discount             Decimal                 @default(0) @db.Decimal(12, 2)
-  grandTotal           Decimal                 @default(0) @map("grand_total") @db.Decimal(12, 2)
+  sparePartsTotal      Decimal                 @default(0) @map("spare_parts_total") 
+  serviceLabourTotal   Decimal                 @default(0) @map("service_labour_total") 
+  subTotal             Decimal                 @default(0) @map("sub_total") 
+  discount             Decimal                 @default(0) 
+  grandTotal           Decimal                 @default(0) @map("grand_total") 
 
   // Status & Signatures
-  status               RequisitionStatus       @default(PENDING)
-  preparedBy           String?                 @default("1 Service & Repair Technology.") @map("prepared_by") @db.VarChar(100)
-  clientApprovalNote   String?                 @map("client_approval_note") @db.VarChar(255)
+  status               String       @default("PENDING")
+  preparedBy           String?                 @default("1 Service & Repair Technology.") @map("prepared_by") 
+  clientApprovalNote   String?                 @map("client_approval_note") 
 
   items                RequisitionItem[]
 
@@ -328,13 +283,13 @@ model RequisitionItem {
   id            String                  @id @default(cuid())
   requisitionId String                  @map("requisition_id")
   requisition   Requisition             @relation(fields: [requisitionId], references: [id], onDelete: Cascade)
-  category      RequisitionItemCategory @default(SPARE_PARTS)
+  category      String @default("SPARE_PARTS")
   sl            Int                     @default(1)
-  description   String                  @db.VarChar(255)
-  qty           Decimal                 @default(1) @db.Decimal(10, 2)
-  unitPrice     Decimal                 @default(0) @map("unit_price") @db.Decimal(12, 2)
-  totalPrice    Decimal                 @default(0) @map("total_price") @db.Decimal(12, 2)
-  remarks       String?                 @db.VarChar(100)
+  description   String                  
+  qty           Decimal                 @default(1) 
+  unitPrice     Decimal                 @default(0) @map("unit_price") 
+  totalPrice    Decimal                 @default(0) @map("total_price") 
+  remarks       String?                 
 
   @@index([requisitionId])
   @@index([category])
@@ -342,77 +297,61 @@ model RequisitionItem {
 }
 
 // Gate Pass Models
-enum GatePassType {
-  RETURNABLE
-  NON_RETURNABLE
-}
-
-enum ChallanKind {
-  RECEIVING
-  RETURN
-}
-
-enum GatePassStatus {
-  PENDING
-  APPROVED
-  DISPATCHED
-  COMPLETED
-}
 
 model GatePass {
   id                     String          @id @default(cuid())
-  passNo                 String          @unique @map("pass_no") @db.VarChar(50)
-  date                   DateTime        @db.Date
-  customerType           CustomerType    @default(CORPORATE) @map("customer_type")
-  passType               GatePassType    @default(RETURNABLE) @map("pass_type")
-  challanKind            ChallanKind     @default(RECEIVING) @map("challan_kind")
+  passNo                 String          @unique @map("pass_no") 
+  date                   DateTime        
+  customerType           String    @default("CORPORATE") @map("customer_type")
+  passType               String    @default("RETURNABLE") @map("pass_type")
+  challanKind            String     @default("RECEIVING") @map("challan_kind")
 
   // Common Header info
-  referenceWorkOrderNo   String?         @map("reference_work_order_no") @db.VarChar(100)
-  gatePassCategory       String?         @map("gate_pass_category") @db.VarChar(100)
+  referenceWorkOrderNo   String?         @map("reference_work_order_no") 
+  gatePassCategory       String?         @map("gate_pass_category") 
   
   // Organization / Client info
-  organizationName       String          @map("organization_name") @db.VarChar(255)
-  departmentWard         String?         @map("department_ward") @db.VarChar(100)
-  address                String?         @db.Text
-  contactPerson          String?         @map("contact_person") @db.VarChar(100)
-  contactNo              String?         @map("contact_no") @db.VarChar(50)
+  organizationName       String          @map("organization_name") 
+  departmentWard         String?         @map("department_ward") 
+  address                String?         
+  contactPerson          String?         @map("contact_person") 
+  contactNo              String?         @map("contact_no") 
   
   // Machine Details (for Receiving Challan)
-  machineName            String?         @map("machine_name") @db.VarChar(255)
+  machineName            String?         @map("machine_name") 
   quantity               Int             @default(1)
-  brandManufacturer      String?         @map("brand_manufacturer") @db.VarChar(100)
-  modelNo                String?         @map("model_no") @db.VarChar(100)
-  serialNo               String?         @map("serial_no") @db.VarChar(100)
-  assetIdNo              String?         @map("asset_id_no") @db.VarChar(100)
-  accessoriesReceived    String?         @map("accessories_received") @db.Text
-  machineCondition       String?         @map("machine_condition") @db.VarChar(50)
-  reportedProblem        String?         @map("reported_problem") @db.Text
-  physicalDamageCondition String?        @map("physical_damage_condition") @db.Text
+  brandManufacturer      String?         @map("brand_manufacturer") 
+  modelNo                String?         @map("model_no") 
+  serialNo               String?         @map("serial_no") 
+  assetIdNo              String?         @map("asset_id_no") 
+  accessoriesReceived    String?         @map("accessories_received") 
+  machineCondition       String?         @map("machine_condition") 
+  reportedProblem        String?         @map("reported_problem") 
+  physicalDamageCondition String?        @map("physical_damage_condition") 
 
   // Logistics & Movement
-  destination            String?         @db.VarChar(255)
-  vehicleNo              String?         @map("vehicle_no") @db.VarChar(100)
-  carrierName            String?         @map("carrier_name") @db.VarChar(100)
-  deliveredBy            String?         @map("delivered_by") @db.VarChar(100)
-  designationStaffId     String?         @map("designation_staff_id") @db.VarChar(100)
-  transportPurpose       String?         @map("transport_purpose") @db.VarChar(100)
-  purpose                String?         @db.Text
-  expectedReturnDate     DateTime?       @map("expected_return_date") @db.Date
+  destination            String?         
+  vehicleNo              String?         @map("vehicle_no") 
+  carrierName            String?         @map("carrier_name") 
+  deliveredBy            String?         @map("delivered_by") 
+  designationStaffId     String?         @map("designation_staff_id") 
+  transportPurpose       String?         @map("transport_purpose") 
+  purpose                String?         
+  expectedReturnDate     DateTime?       @map("expected_return_date") 
 
   // Return Specific Fields (for Return Challan)
-  returnDate             DateTime?       @map("return_date") @db.Date
-  serviceReportNo        String?         @map("service_report_no") @db.VarChar(100)
-  returnCondition        String?         @map("return_condition") @db.VarChar(100)
-  workDoneComments       String?         @map("work_done_comments") @db.Text
-  returnedAccessories    String?         @map("returned_accessories") @db.Text
-  pendingIssuesAdvice    String?         @map("pending_issues_advice") @db.Text
+  returnDate             DateTime?       @map("return_date") 
+  serviceReportNo        String?         @map("service_report_no") 
+  returnCondition        String?         @map("return_condition") 
+  workDoneComments       String?         @map("work_done_comments") 
+  returnedAccessories    String?         @map("returned_accessories") 
+  pendingIssuesAdvice    String?         @map("pending_issues_advice") 
 
   // Signatures & Status
-  status                 GatePassStatus  @default(PENDING)
-  preparedBy             String?         @default("1 Service & Repair Technology.") @map("prepared_by") @db.VarChar(100)
-  authorizedBy           String?         @map("authorized_by") @db.VarChar(100)
-  receivedBy             String?         @map("received_by") @db.VarChar(100)
+  status                 String  @default("PENDING")
+  preparedBy             String?         @default("1 Service & Repair Technology.") @map("prepared_by") 
+  authorizedBy           String?         @map("authorized_by") 
+  receivedBy             String?         @map("received_by") 
 
   items                  GatePassItem[]
 
@@ -435,10 +374,10 @@ model GatePassItem {
   gatePassId  String   @map("gate_pass_id")
   gatePass    GatePass @relation(fields: [gatePassId], references: [id], onDelete: Cascade)
   sl          Int      @default(1)
-  description String   @db.VarChar(255)
-  qty         Decimal  @default(1) @db.Decimal(10, 2)
-  serialNo    String?  @map("serial_no") @db.VarChar(100)
-  remarks     String?  @db.VarChar(100)
+  description String   
+  qty         Decimal  @default(1) 
+  serialNo    String?  @map("serial_no") 
+  remarks     String?  
 
   @@index([gatePassId])
   @@map("gate_pass_items")
@@ -447,28 +386,22 @@ model GatePassItem {
 // ==========================================
 // TA / DA MANAGEMENT (TRAVEL & DAILY ALLOWANCE)
 // ==========================================
-enum TaDaStatus {
-  PENDING
-  APPROVED
-  REJECTED
-  PAID
-}
 
 model TaDaBill {
   id              String      @id @default(cuid())
-  billNo          String      @unique @map("bill_no") @db.VarChar(50)
-  submissionDate  DateTime    @map("submission_date") @db.Date
-  employeeName    String      @map("employee_name") @db.VarChar(150)
-  designation     String?     @db.VarChar(100)
-  employeeId      String?     @map("employee_id") @db.VarChar(50)
-  department      String?     @db.VarChar(100)
-  totalAmount     Decimal     @default(0) @map("total_amount") @db.Decimal(12, 2)
-  status          TaDaStatus  @default(PENDING)
+  billNo          String      @unique @map("bill_no") 
+  submissionDate  DateTime    @map("submission_date") 
+  employeeName    String      @map("employee_name") 
+  designation     String?     
+  employeeId      String?     @map("employee_id") 
+  department      String?     
+  totalAmount     Decimal     @default(0) @map("total_amount") 
+  status          String  @default("PENDING")
 
-  receivedBy      String?     @map("received_by") @db.VarChar(100)
-  checkedBy       String?     @map("checked_by") @db.VarChar(100)
-  approvedBy      String?     @map("approved_by") @db.VarChar(100)
-  remarks         String?     @db.Text
+  receivedBy      String?     @map("received_by") 
+  checkedBy       String?     @map("checked_by") 
+  approvedBy      String?     @map("approved_by") 
+  remarks         String?     
 
   items           TaDaItem[]
 
@@ -490,13 +423,13 @@ model TaDaItem {
   taDaBillId  String    @map("tada_bill_id")
   taDaBill    TaDaBill  @relation(fields: [taDaBillId], references: [id], onDelete: Cascade)
   sl          Int       @default(1)
-  date        DateTime? @db.Date
-  particular  String    @db.VarChar(255)
-  vehicleName String?   @map("vehicle_name") @db.VarChar(100)
-  qty         Decimal   @default(1) @db.Decimal(10, 2)
-  unitTaka    Decimal   @default(0) @map("unit_taka") @db.Decimal(10, 2)
-  totalTaka   Decimal   @default(0) @map("total_taka") @db.Decimal(12, 2)
-  checkedBy   String?   @map("checked_by") @db.VarChar(100)
+  date        DateTime? 
+  particular  String    
+  vehicleName String?   @map("vehicle_name") 
+  qty         Decimal   @default(1) 
+  unitTaka    Decimal   @default(0) @map("unit_taka") 
+  totalTaka   Decimal   @default(0) @map("total_taka") 
+  checkedBy   String?   @map("checked_by") 
 
   @@index([taDaBillId])
   @@map("tada_items")
@@ -506,22 +439,17 @@ model TaDaItem {
 // OFFICE RENT MODULE
 // ==========================================
 
-enum RentPaymentStatus {
-  PAID
-  UNPAID
-}
-
 model OfficeRent {
   id            String            @id @default(cuid())
-  month         String            @db.VarChar(50) // e.g., "June 2026"
-  title         String            @default("Office rent") @db.VarChar(150)
-  amount        Decimal           @db.Decimal(12, 2)
-  status        RentPaymentStatus @default(UNPAID)
-  paymentDate   DateTime?         @map("payment_date") @db.Date
-  paymentMethod String?           @map("payment_method") @db.VarChar(50) // e.g. Cash, Bank Transfer, bKash
-  landlordName  String?           @map("landlord_name") @db.VarChar(150)
-  receiptNo     String?           @map("receipt_no") @db.VarChar(100)
-  note          String?           @db.Text
+  month         String             // e.g., "June 2026"
+  title         String            @default("Office rent") 
+  amount        Decimal           
+  status        String @default("UNPAID")
+  paymentDate   DateTime?         @map("payment_date") 
+  paymentMethod String?           @map("payment_method")  // e.g. Cash, Bank Transfer, bKash
+  landlordName  String?           @map("landlord_name") 
+  receiptNo     String?           @map("receipt_no") 
+  note          String?           
 
   createdById   String?           @map("created_by_id")
   createdBy     User?             @relation(fields: [createdById], references: [id], onDelete: SetNull)
@@ -540,13 +468,13 @@ model OfficeRent {
 
 model LabPart {
   id               String    @id @default(cuid())
-  name             String    @unique @db.VarChar(191)
-  partNumber       String?   @map("part_number") @db.VarChar(100)
-  unit             String    @default("pcs") @db.VarChar(30)
-  unitPrice        Decimal   @default(0) @map("unit_price") @db.Decimal(12, 2)
-  stockQuantity    Decimal   @default(0) @map("stock_quantity") @db.Decimal(10, 2)
-  totalInQuantity  Decimal   @default(0) @map("total_in_quantity") @db.Decimal(10, 2)
-  totalOutQuantity Decimal   @default(0) @map("total_out_quantity") @db.Decimal(10, 2)
+  name             String    @unique 
+  partNumber       String?   @map("part_number") 
+  unit             String    @default("pcs") 
+  unitPrice        Decimal   @default(0) @map("unit_price") 
+  stockQuantity    Decimal   @default(0) @map("stock_quantity") 
+  totalInQuantity  Decimal   @default(0) @map("total_in_quantity") 
+  totalOutQuantity Decimal   @default(0) @map("total_out_quantity") 
   createdAt        DateTime  @default(now()) @map("created_at")
   updatedAt        DateTime  @updatedAt @map("updated_at")
 
@@ -559,16 +487,16 @@ model LabPart {
 
 model LabIn {
   id          String    @id @default(cuid())
-  date        DateTime  @db.Date
+  date        DateTime  
   partId      String    @map("part_id")
   part        LabPart   @relation(fields: [partId], references: [id], onDelete: Cascade)
-  partsName   String    @map("parts_name") @db.VarChar(191)
-  quantity    Decimal   @db.Decimal(10, 2)
-  unitPrice   Decimal   @map("unit_price") @db.Decimal(12, 2)
-  totalPrice  Decimal   @map("total_price") @db.Decimal(12, 2)
-  supplier    String?   @db.VarChar(150)
-  invoiceNo   String?   @map("invoice_no") @db.VarChar(100)
-  remarks     String?   @db.Text
+  partsName   String    @map("parts_name") 
+  quantity    Decimal   
+  unitPrice   Decimal   @map("unit_price") 
+  totalPrice  Decimal   @map("total_price") 
+  supplier    String?   
+  invoiceNo   String?   @map("invoice_no") 
+  remarks     String?   
 
   createdById String?   @map("created_by_id")
   createdBy   User?     @relation(fields: [createdById], references: [id], onDelete: SetNull)
@@ -584,16 +512,16 @@ model LabIn {
 
 model LabOut {
   id           String    @id @default(cuid())
-  date         DateTime  @db.Date
+  date         DateTime  
   partId       String    @map("part_id")
   part         LabPart   @relation(fields: [partId], references: [id], onDelete: Cascade)
-  partsName    String    @map("parts_name") @db.VarChar(191)
-  quantity     Decimal   @db.Decimal(10, 2)
-  unitPrice    Decimal   @map("unit_price") @db.Decimal(12, 2)
-  totalPrice   Decimal   @map("total_price") @db.Decimal(12, 2)
-  dispatchedTo String?   @map("dispatched_to") @db.VarChar(150)
-  referenceNo  String?   @map("reference_no") @db.VarChar(100)
-  remarks      String?   @db.Text
+  partsName    String    @map("parts_name") 
+  quantity     Decimal   
+  unitPrice    Decimal   @map("unit_price") 
+  totalPrice   Decimal   @map("total_price") 
+  dispatchedTo String?   @map("dispatched_to") 
+  referenceNo  String?   @map("reference_no") 
+  remarks      String?   
 
   createdById  String?   @map("created_by_id")
   createdBy    User?     @relation(fields: [createdById], references: [id], onDelete: SetNull)
@@ -611,26 +539,21 @@ model LabOut {
 // EMPLOYEE MANAGEMENT MODULE
 // ==========================================
 
-enum EmployeeStatus {
-  ACTIVE
-  INACTIVE
-}
-
 model Employee {
   id              String         @id @default(cuid())
-  employeeId      String         @unique @map("employee_id") @db.VarChar(50)
-  name            String         @db.VarChar(120)
-  email           String         @db.VarChar(150)
-  phone           String?        @db.VarChar(50)
-  designation     String         @db.VarChar(100)
-  department      String         @db.VarChar(100)
-  basicSalary     Decimal        @map("basic_salary") @db.Decimal(12, 2)
-  allowance       Decimal        @default(0) @map("allowance") @db.Decimal(12, 2) // Mobile & other allowance
-  grossSalary     Decimal        @map("gross_salary") @db.Decimal(12, 2) // Basic + Allowance
-  joinDate        DateTime?      @map("join_date") @db.Date
-  status          EmployeeStatus @default(ACTIVE)
-  address         String?        @db.VarChar(255)
-  notes           String?        @db.Text
+  employeeId      String         @unique @map("employee_id") 
+  name            String         
+  email           String         
+  phone           String?        
+  designation     String         
+  department      String         
+  basicSalary     Decimal        @map("basic_salary") 
+  allowance       Decimal        @default(0) @map("allowance")  // Mobile & other allowance
+  grossSalary     Decimal        @map("gross_salary")  // Basic + Allowance
+  joinDate        DateTime?      @map("join_date") 
+  status          String @default("ACTIVE")
+  address         String?        
+  notes           String?        
 
   salaryRecords   SalaryRecord[]
 
@@ -652,36 +575,30 @@ model Employee {
 // MANAGEMENT: SALARY & PAYROLL MODULE
 // ==========================================
 
-enum SalaryPaymentStatus {
-  PAID
-  PARTIAL
-  UNPAID
-}
-
 model SalaryRecord {
   id                    String              @id @default(cuid())
-  month                 String              @db.VarChar(50) // e.g., "Jun 2026"
+  month                 String               // e.g., "Jun 2026"
   employeeIdRef         String?             @map("employee_id_ref")
   employee              Employee?           @relation(fields: [employeeIdRef], references: [id], onDelete: SetNull)
-  employeeName          String              @map("employee_name") @db.VarChar(120)
-  employeeCode          String              @map("employee_code") @db.VarChar(50) // e.g. "7141"
-  designation           String              @db.VarChar(100)
-  department            String              @db.VarChar(100)
-  basicSalary           Decimal             @map("basic_salary") @db.Decimal(12, 2)
-  allowance             Decimal             @default(0) @map("allowance") @db.Decimal(12, 2) // Mobile & other allowance
+  employeeName          String              @map("employee_name") 
+  employeeCode          String              @map("employee_code")  // e.g. "7141"
+  designation           String              
+  department            String              
+  basicSalary           Decimal             @map("basic_salary") 
+  allowance             Decimal             @default(0) @map("allowance")  // Mobile & other allowance
   totalDays             Int                 @default(30) @map("total_days")
   presentDays           Int                 @default(30) @map("present_days")
   absentDays            Int                 @default(0) @map("absent_days")
-  totalEarnings         Decimal             @map("total_earnings") @db.Decimal(12, 2)
-  advanceLoan           Decimal             @default(0) @map("advance_loan") @db.Decimal(12, 2)
-  previousDue           Decimal             @default(0) @map("previous_due") @db.Decimal(12, 2)
-  netPayable            Decimal             @map("net_payable") @db.Decimal(12, 2)
-  paidAmount            Decimal             @default(0) @map("paid_amount") @db.Decimal(12, 2)
-  dueAmount             Decimal             @default(0) @map("due_amount") @db.Decimal(12, 2)
-  paymentStatus         SalaryPaymentStatus @default(UNPAID) @map("payment_status")
-  paymentMethod         String?             @map("payment_method") @db.VarChar(50) // Cash, Bank, Mobile/bKash
-  paymentDate           DateTime?           @map("payment_date") @db.Date
-  notes                 String?             @db.Text
+  totalEarnings         Decimal             @map("total_earnings") 
+  advanceLoan           Decimal             @default(0) @map("advance_loan") 
+  previousDue           Decimal             @default(0) @map("previous_due") 
+  netPayable            Decimal             @map("net_payable") 
+  paidAmount            Decimal             @default(0) @map("paid_amount") 
+  dueAmount             Decimal             @default(0) @map("due_amount") 
+  paymentStatus         String @default("UNPAID") @map("payment_status")
+  paymentMethod         String?             @map("payment_method")  // Cash, Bank, Mobile/bKash
+  paymentDate           DateTime?           @map("payment_date") 
+  notes                 String?             
 
   createdById           String?             @map("created_by_id")
   createdBy             User?               @relation(fields: [createdById], references: [id], onDelete: SetNull)
@@ -696,8 +613,4 @@ model SalaryRecord {
   @@index([createdById])
   @@map("salary_records")
 }
-
-
-
-
 

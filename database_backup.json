@@ -1,0 +1,2678 @@
+{
+  "users": [
+    {
+      "id": "cmw5acq0w00009newdrpjsmdo",
+      "name": "Super Administrator",
+      "email": "admin@example.com",
+      "password": "$2b$12$.kTY33G6fTWr8vc7nipIJ.nj45nGp7dD8OjVFvSgX5BxJA.H2LcYe",
+      "roleEnum": "SUPER_ADMIN",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "isActive": true,
+      "createdAt": "2026-11-06T18:06:05.505Z",
+      "updatedAt": "2026-11-19T07:18:23.207Z"
+    }
+  ],
+  "roles": [
+    {
+      "id": "cmw5bblju000012ea5rm191vs",
+      "name": "Super Admin",
+      "description": "Full system access and governance with unrestricted permissions.",
+      "isActive": true,
+      "createdAt": "2026-11-06T18:33:12.666Z",
+      "updatedAt": "2026-11-17T11:13:50.891Z"
+    },
+    {
+      "id": "cmw5bblk3000112ea055q4ng9",
+      "name": "Admin",
+      "description": "Administrative operations across all business management modules.",
+      "isActive": true,
+      "createdAt": "2026-11-06T18:33:12.675Z",
+      "updatedAt": "2026-11-17T11:13:50.955Z"
+    },
+    {
+      "id": "cmw5bblk5000212ea0aegjiy7",
+      "name": "Manager",
+      "description": "Operational oversight and department-level management.",
+      "isActive": true,
+      "createdAt": "2026-11-06T18:33:12.677Z",
+      "updatedAt": "2026-11-17T11:13:50.957Z"
+    },
+    {
+      "id": "cmw5bblk9000312ear08sf3un",
+      "name": "Employee",
+      "description": "Staff member with basic operational viewing and processing tasks.",
+      "isActive": true,
+      "createdAt": "2026-11-06T18:33:12.681Z",
+      "updatedAt": "2026-11-17T11:13:50.959Z"
+    }
+  ],
+  "permissions": [
+    {
+      "id": "cmw5bblkd000412eaorez3sh1",
+      "name": "View Dashboard",
+      "key": "dashboard.view",
+      "description": "View dashboard overview and KPI statistics.",
+      "createdAt": "2026-11-06T18:33:12.685Z",
+      "updatedAt": "2026-11-17T11:13:50.962Z"
+    },
+    {
+      "id": "cmw5bblkk000512eagnubzrvw",
+      "name": "View Management Module",
+      "key": "management.view",
+      "description": "Access management domain section.",
+      "createdAt": "2026-11-06T18:33:12.692Z",
+      "updatedAt": "2026-11-17T11:13:50.965Z"
+    },
+    {
+      "id": "cmw5bblkl000612ea3urdynwy",
+      "name": "View Income",
+      "key": "management.income.view",
+      "description": "View income entries and invoices.",
+      "createdAt": "2026-11-06T18:33:12.694Z",
+      "updatedAt": "2026-11-17T11:13:50.967Z"
+    },
+    {
+      "id": "cmw5bblkn000712ea10os8txc",
+      "name": "Create Income",
+      "key": "management.income.create",
+      "description": "Create new income transactions.",
+      "createdAt": "2026-11-06T18:33:12.695Z",
+      "updatedAt": "2026-11-17T11:13:50.968Z"
+    },
+    {
+      "id": "cmw5bblko000812eal19b914t",
+      "name": "Edit Income",
+      "key": "management.income.edit",
+      "description": "Modify existing income transactions.",
+      "createdAt": "2026-11-06T18:33:12.697Z",
+      "updatedAt": "2026-11-17T11:13:50.970Z"
+    },
+    {
+      "id": "cmw5bblkq000912eapalwgv4y",
+      "name": "Delete Income",
+      "key": "management.income.delete",
+      "description": "Delete income transactions.",
+      "createdAt": "2026-11-06T18:33:12.698Z",
+      "updatedAt": "2026-11-17T11:13:50.972Z"
+    },
+    {
+      "id": "cmw5bblkr000a12eah0fu1ftt",
+      "name": "View Expense",
+      "key": "management.expense.view",
+      "description": "View business expenditures.",
+      "createdAt": "2026-11-06T18:33:12.700Z",
+      "updatedAt": "2026-11-17T11:13:50.973Z"
+    },
+    {
+      "id": "cmw5bblkt000b12eaa8cvhzwr",
+      "name": "View Salary",
+      "key": "management.salary.view",
+      "description": "View payroll and salary records.",
+      "createdAt": "2026-11-06T18:33:12.701Z",
+      "updatedAt": "2026-11-17T11:13:50.975Z"
+    },
+    {
+      "id": "cmw5bblku000c12ea41mmjw4h",
+      "name": "View Office Rent",
+      "key": "management.office-rent.view",
+      "description": "View rent and lease agreements.",
+      "createdAt": "2026-11-06T18:33:12.703Z",
+      "updatedAt": "2026-11-17T11:13:50.977Z"
+    },
+    {
+      "id": "cmw5bblkw000d12eaomqqwl7s",
+      "name": "View TA/DA",
+      "key": "management.ta-da.view",
+      "description": "View travel and daily allowances.",
+      "createdAt": "2026-11-06T18:33:12.704Z",
+      "updatedAt": "2026-11-17T11:13:50.979Z"
+    },
+    {
+      "id": "cmw5bblkx000e12ea9edu4b8h",
+      "name": "View Other Expenses",
+      "key": "management.others.view",
+      "description": "View miscellaneous expense records.",
+      "createdAt": "2026-11-06T18:33:12.705Z",
+      "updatedAt": "2026-11-17T11:13:50.980Z"
+    },
+    {
+      "id": "cmw5bblky000f12eaahasmnbw",
+      "name": "View Service Module",
+      "key": "service.view",
+      "description": "Access service operations section.",
+      "createdAt": "2026-11-06T18:33:12.707Z",
+      "updatedAt": "2026-11-17T11:13:50.981Z"
+    },
+    {
+      "id": "cmw5bbll0000g12eaaob2ji1v",
+      "name": "View Lab In",
+      "key": "service.lab-in.view",
+      "description": "View lab intake records and diagnostic intake.",
+      "createdAt": "2026-11-06T18:33:12.708Z",
+      "updatedAt": "2026-11-17T11:13:50.983Z"
+    },
+    {
+      "id": "cmw5bbll1000h12ea4oqs7114",
+      "name": "View Lab Out",
+      "key": "service.lab-out.view",
+      "description": "View lab outgoing delivery and sample records.",
+      "createdAt": "2026-11-06T18:33:12.709Z",
+      "updatedAt": "2026-11-17T11:13:50.984Z"
+    },
+    {
+      "id": "cmw5bbll2000i12eai29dgp05",
+      "name": "View Customer Module",
+      "key": "customer.view",
+      "description": "Access customer relationship section.",
+      "createdAt": "2026-11-06T18:33:12.711Z",
+      "updatedAt": "2026-11-17T11:13:50.988Z"
+    },
+    {
+      "id": "cmw5bbll4000j12eacdykv9gj",
+      "name": "View Corporate Customers",
+      "key": "customer.corporate.view",
+      "description": "Access corporate customer category.",
+      "createdAt": "2026-11-06T18:33:12.712Z",
+      "updatedAt": "2026-11-17T11:13:50.990Z"
+    },
+    {
+      "id": "cmw5bbll5000k12eaabe0n1mb",
+      "name": "View Corporate Bills",
+      "key": "customer.corporate.bill.view",
+      "description": "View corporate invoices and billing.",
+      "createdAt": "2026-11-06T18:33:12.714Z",
+      "updatedAt": "2026-11-17T11:13:50.991Z"
+    },
+    {
+      "id": "cmw5bbll6000l12ea2nr4b0ka",
+      "name": "View Corporate Requisitions",
+      "key": "customer.corporate.requisition.view",
+      "description": "View corporate requisition orders.",
+      "createdAt": "2026-11-06T18:33:12.715Z",
+      "updatedAt": "2026-11-17T11:13:50.993Z"
+    },
+    {
+      "id": "cmw5bbll8000m12eagxktzujx",
+      "name": "View Corporate Gate Pass",
+      "key": "customer.corporate.gate-pass.view",
+      "description": "View corporate gate passes.",
+      "createdAt": "2026-11-06T18:33:12.716Z",
+      "updatedAt": "2026-11-17T11:13:50.994Z"
+    },
+    {
+      "id": "cmw5bbll9000n12eadcidqtrk",
+      "name": "View Non-Corporate Customers",
+      "key": "customer.non-corporate.view",
+      "description": "Access retail customer category.",
+      "createdAt": "2026-11-06T18:33:12.718Z",
+      "updatedAt": "2026-11-17T11:13:50.996Z"
+    },
+    {
+      "id": "cmw5bbllb000o12ea01vuh3kg",
+      "name": "View Non-Corporate Requisitions",
+      "key": "customer.non-corporate.requisition.view",
+      "description": "View retail requisition slips.",
+      "createdAt": "2026-11-06T18:33:12.719Z",
+      "updatedAt": "2026-11-17T11:13:50.997Z"
+    },
+    {
+      "id": "cmw5bbllc000p12eaytznd8rf",
+      "name": "View Non-Corporate Bills",
+      "key": "customer.non-corporate.bill.view",
+      "description": "View retail receipts and bills.",
+      "createdAt": "2026-11-06T18:33:12.720Z",
+      "updatedAt": "2026-11-17T11:13:50.998Z"
+    },
+    {
+      "id": "cmw5bblld000q12ea8qwstdrb",
+      "name": "View Non-Corporate Gate Pass",
+      "key": "customer.non-corporate.gate-pass.view",
+      "description": "View retail gate passes.",
+      "createdAt": "2026-11-06T18:33:12.721Z",
+      "updatedAt": "2026-11-17T11:13:50.999Z"
+    },
+    {
+      "id": "cmw5bblle000r12ea9s1lj2dx",
+      "name": "View Settings Module",
+      "key": "settings.view",
+      "description": "Access system settings section.",
+      "createdAt": "2026-11-06T18:33:12.722Z",
+      "updatedAt": "2026-11-17T11:13:51.001Z"
+    },
+    {
+      "id": "cmw5bbllf000s12eaxwctr5cp",
+      "name": "View Profile Settings",
+      "key": "settings.profile.view",
+      "description": "View and update admin profile.",
+      "createdAt": "2026-11-06T18:33:12.724Z",
+      "updatedAt": "2026-11-17T11:13:51.002Z"
+    },
+    {
+      "id": "cmw5bbllh000t12ea69cmf3dy",
+      "name": "Change Password",
+      "key": "settings.change-password.view",
+      "description": "Update user account password.",
+      "createdAt": "2026-11-06T18:33:12.725Z",
+      "updatedAt": "2026-11-17T11:13:51.003Z"
+    },
+    {
+      "id": "cmw5bblli000u12eavpboxa92",
+      "name": "View System Settings",
+      "key": "settings.system.view",
+      "description": "View platform configuration settings.",
+      "createdAt": "2026-11-06T18:33:12.726Z",
+      "updatedAt": "2026-11-17T11:13:51.004Z"
+    },
+    {
+      "id": "cmwklgy2x000itak3x8g76l1z",
+      "name": "View Employee Management",
+      "key": "employee.view",
+      "description": "Access employee directory, profiles, and salary info.",
+      "createdAt": "2026-11-17T11:13:50.986Z",
+      "updatedAt": "2026-11-17T11:13:50.986Z"
+    }
+  ],
+  "rolePermissions": [
+    {
+      "id": "cmw5bbllj000w12eabmu24lp5",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblkd000412eaorez3sh1",
+      "createdAt": "2026-11-06T18:33:12.728Z"
+    },
+    {
+      "id": "cmw5bblll000y12ea07d6a6gs",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblkk000512eagnubzrvw",
+      "createdAt": "2026-11-06T18:33:12.730Z"
+    },
+    {
+      "id": "cmw5bblln001012ea9jbdejrc",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblkl000612ea3urdynwy",
+      "createdAt": "2026-11-06T18:33:12.731Z"
+    },
+    {
+      "id": "cmw5bbllo001212eaaojtbwod",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblkn000712ea10os8txc",
+      "createdAt": "2026-11-06T18:33:12.732Z"
+    },
+    {
+      "id": "cmw5bbllp001412ea0z0d5myn",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblko000812eal19b914t",
+      "createdAt": "2026-11-06T18:33:12.734Z"
+    },
+    {
+      "id": "cmw5bbllr001612eacmfc9u9p",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblkq000912eapalwgv4y",
+      "createdAt": "2026-11-06T18:33:12.735Z"
+    },
+    {
+      "id": "cmw5bblls001812eabhwcyqs7",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblkr000a12eah0fu1ftt",
+      "createdAt": "2026-11-06T18:33:12.736Z"
+    },
+    {
+      "id": "cmw5bbllt001a12eaugt8w7dn",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblkt000b12eaa8cvhzwr",
+      "createdAt": "2026-11-06T18:33:12.738Z"
+    },
+    {
+      "id": "cmw5bbllv001c12eaulyda06a",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblku000c12ea41mmjw4h",
+      "createdAt": "2026-11-06T18:33:12.739Z"
+    },
+    {
+      "id": "cmw5bbllx001e12eashk4m827",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblkw000d12eaomqqwl7s",
+      "createdAt": "2026-11-06T18:33:12.741Z"
+    },
+    {
+      "id": "cmw5bblly001g12eai6u7dajw",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblkx000e12ea9edu4b8h",
+      "createdAt": "2026-11-06T18:33:12.743Z"
+    },
+    {
+      "id": "cmw5bblm0001i12eaaa6md94p",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblky000f12eaahasmnbw",
+      "createdAt": "2026-11-06T18:33:12.744Z"
+    },
+    {
+      "id": "cmw5bblm1001k12eadh7y2nhw",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbll0000g12eaaob2ji1v",
+      "createdAt": "2026-11-06T18:33:12.746Z"
+    },
+    {
+      "id": "cmw5bblm3001m12eaov5375rl",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbll1000h12ea4oqs7114",
+      "createdAt": "2026-11-06T18:33:12.747Z"
+    },
+    {
+      "id": "cmw5bblm4001o12eab7tt05wq",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbll2000i12eai29dgp05",
+      "createdAt": "2026-11-06T18:33:12.748Z"
+    },
+    {
+      "id": "cmw5bblm5001q12ea3hum0p9t",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbll4000j12eacdykv9gj",
+      "createdAt": "2026-11-06T18:33:12.750Z"
+    },
+    {
+      "id": "cmw5bblm7001s12eaqs2gcdbx",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbll5000k12eaabe0n1mb",
+      "createdAt": "2026-11-06T18:33:12.751Z"
+    },
+    {
+      "id": "cmw5bblm8001u12ean0cqvcto",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbll6000l12ea2nr4b0ka",
+      "createdAt": "2026-11-06T18:33:12.753Z"
+    },
+    {
+      "id": "cmw5bblma001w12eacorszeyq",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbll8000m12eagxktzujx",
+      "createdAt": "2026-11-06T18:33:12.754Z"
+    },
+    {
+      "id": "cmw5bblmc001y12ea3vt2tzb8",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbll9000n12eadcidqtrk",
+      "createdAt": "2026-11-06T18:33:12.756Z"
+    },
+    {
+      "id": "cmw5bblmd002012eam46equcq",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbllb000o12ea01vuh3kg",
+      "createdAt": "2026-11-06T18:33:12.757Z"
+    },
+    {
+      "id": "cmw5bblmi002212eaw5hal35v",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbllc000p12eaytznd8rf",
+      "createdAt": "2026-11-06T18:33:12.762Z"
+    },
+    {
+      "id": "cmw5bblmj002412eaewpg6whd",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblld000q12ea8qwstdrb",
+      "createdAt": "2026-11-06T18:33:12.763Z"
+    },
+    {
+      "id": "cmw5bblmk002612eaa7fcxpbv",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblle000r12ea9s1lj2dx",
+      "createdAt": "2026-11-06T18:33:12.765Z"
+    },
+    {
+      "id": "cmw5bblmm002812eaq6iz2sly",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbllf000s12eaxwctr5cp",
+      "createdAt": "2026-11-06T18:33:12.766Z"
+    },
+    {
+      "id": "cmw5bblmn002a12eaqwg5anqv",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bbllh000t12ea69cmf3dy",
+      "createdAt": "2026-11-06T18:33:12.767Z"
+    },
+    {
+      "id": "cmw5bblmo002c12eawifcxm7z",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmw5bblli000u12eavpboxa92",
+      "createdAt": "2026-11-06T18:33:12.769Z"
+    },
+    {
+      "id": "cmw5bblmq002e12eandjzlvte",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblkd000412eaorez3sh1",
+      "createdAt": "2026-11-06T18:33:12.770Z"
+    },
+    {
+      "id": "cmw5bblmr002g12ea8f85lpim",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblkk000512eagnubzrvw",
+      "createdAt": "2026-11-06T18:33:12.772Z"
+    },
+    {
+      "id": "cmw5bblmt002i12eac89nguc1",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblkl000612ea3urdynwy",
+      "createdAt": "2026-11-06T18:33:12.773Z"
+    },
+    {
+      "id": "cmw5bblmu002k12eao7sem8h3",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblkn000712ea10os8txc",
+      "createdAt": "2026-11-06T18:33:12.774Z"
+    },
+    {
+      "id": "cmw5bblmv002m12ea8by6ct03",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblko000812eal19b914t",
+      "createdAt": "2026-11-06T18:33:12.776Z"
+    },
+    {
+      "id": "cmw5bblmw002o12eauhonmyrf",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblkq000912eapalwgv4y",
+      "createdAt": "2026-11-06T18:33:12.777Z"
+    },
+    {
+      "id": "cmw5bblmy002q12ead2y4d5ni",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblkr000a12eah0fu1ftt",
+      "createdAt": "2026-11-06T18:33:12.778Z"
+    },
+    {
+      "id": "cmw5bbln0002s12eagdkq1fiu",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblkt000b12eaa8cvhzwr",
+      "createdAt": "2026-11-06T18:33:12.780Z"
+    },
+    {
+      "id": "cmw5bbln1002u12ea83fdne9a",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblku000c12ea41mmjw4h",
+      "createdAt": "2026-11-06T18:33:12.781Z"
+    },
+    {
+      "id": "cmw5bbln2002w12eazfk8h3ya",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblkw000d12eaomqqwl7s",
+      "createdAt": "2026-11-06T18:33:12.783Z"
+    },
+    {
+      "id": "cmw5bbln4002y12eafxzamsva",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblkx000e12ea9edu4b8h",
+      "createdAt": "2026-11-06T18:33:12.784Z"
+    },
+    {
+      "id": "cmw5bbln5003012eayzf4ghjm",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblky000f12eaahasmnbw",
+      "createdAt": "2026-11-06T18:33:12.785Z"
+    },
+    {
+      "id": "cmw5bbln6003212eaiolg2int",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbll0000g12eaaob2ji1v",
+      "createdAt": "2026-11-06T18:33:12.787Z"
+    },
+    {
+      "id": "cmw5bbln8003412eahcyj5ydq",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbll1000h12ea4oqs7114",
+      "createdAt": "2026-11-06T18:33:12.789Z"
+    },
+    {
+      "id": "cmw5bbln9003612eauri5mzun",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbll2000i12eai29dgp05",
+      "createdAt": "2026-11-06T18:33:12.790Z"
+    },
+    {
+      "id": "cmw5bblnb003812eac2esjlyc",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbll4000j12eacdykv9gj",
+      "createdAt": "2026-11-06T18:33:12.791Z"
+    },
+    {
+      "id": "cmw5bblnc003a12eaxvog9rhh",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbll5000k12eaabe0n1mb",
+      "createdAt": "2026-11-06T18:33:12.793Z"
+    },
+    {
+      "id": "cmw5bblne003c12eaf16kjh2t",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbll6000l12ea2nr4b0ka",
+      "createdAt": "2026-11-06T18:33:12.794Z"
+    },
+    {
+      "id": "cmw5bblnf003e12eaakc1ivaz",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbll8000m12eagxktzujx",
+      "createdAt": "2026-11-06T18:33:12.796Z"
+    },
+    {
+      "id": "cmw5bblnh003g12eavz6midbj",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbll9000n12eadcidqtrk",
+      "createdAt": "2026-11-06T18:33:12.798Z"
+    },
+    {
+      "id": "cmw5bblnj003i12ea96fn7z1a",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbllb000o12ea01vuh3kg",
+      "createdAt": "2026-11-06T18:33:12.799Z"
+    },
+    {
+      "id": "cmw5bblnk003k12ea5ltdmnou",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbllc000p12eaytznd8rf",
+      "createdAt": "2026-11-06T18:33:12.800Z"
+    },
+    {
+      "id": "cmw5bblnl003m12ea5a0prgcx",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblld000q12ea8qwstdrb",
+      "createdAt": "2026-11-06T18:33:12.802Z"
+    },
+    {
+      "id": "cmw5bblnn003o12eabz3vrqjn",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblle000r12ea9s1lj2dx",
+      "createdAt": "2026-11-06T18:33:12.803Z"
+    },
+    {
+      "id": "cmw5bblno003q12eaqpnkgs3p",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbllf000s12eaxwctr5cp",
+      "createdAt": "2026-11-06T18:33:12.805Z"
+    },
+    {
+      "id": "cmw5bblnp003s12eab1z13bs6",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bbllh000t12ea69cmf3dy",
+      "createdAt": "2026-11-06T18:33:12.806Z"
+    },
+    {
+      "id": "cmw5bblnr003u12eaqvknwoe3",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmw5bblli000u12eavpboxa92",
+      "createdAt": "2026-11-06T18:33:12.807Z"
+    },
+    {
+      "id": "cmw5bblns003w12eaxae31unr",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bblkd000412eaorez3sh1",
+      "createdAt": "2026-11-06T18:33:12.808Z"
+    },
+    {
+      "id": "cmw5bblnt003y12ealbuzy93p",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bblkk000512eagnubzrvw",
+      "createdAt": "2026-11-06T18:33:12.810Z"
+    },
+    {
+      "id": "cmw5bblnv004012eakrtxup1a",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bblkl000612ea3urdynwy",
+      "createdAt": "2026-11-06T18:33:12.811Z"
+    },
+    {
+      "id": "cmw5bblnw004212eakhlfjlgn",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bblkr000a12eah0fu1ftt",
+      "createdAt": "2026-11-06T18:33:12.812Z"
+    },
+    {
+      "id": "cmw5bblnx004412ea06jgeuc8",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bblkt000b12eaa8cvhzwr",
+      "createdAt": "2026-11-06T18:33:12.814Z"
+    },
+    {
+      "id": "cmw5bblnz004612eadhqkj6jh",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bblku000c12ea41mmjw4h",
+      "createdAt": "2026-11-06T18:33:12.815Z"
+    },
+    {
+      "id": "cmw5bblo1004812ea3dg3t6g3",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bblkw000d12eaomqqwl7s",
+      "createdAt": "2026-11-06T18:33:12.817Z"
+    },
+    {
+      "id": "cmw5bblo2004a12eaohxchstg",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bblkx000e12ea9edu4b8h",
+      "createdAt": "2026-11-06T18:33:12.819Z"
+    },
+    {
+      "id": "cmw5bblo4004c12eas4pc8swi",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bblky000f12eaahasmnbw",
+      "createdAt": "2026-11-06T18:33:12.821Z"
+    },
+    {
+      "id": "cmw5bblo6004e12eavrk1nnp2",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbll0000g12eaaob2ji1v",
+      "createdAt": "2026-11-06T18:33:12.822Z"
+    },
+    {
+      "id": "cmw5bblo7004g12ea5f5z0svf",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbll1000h12ea4oqs7114",
+      "createdAt": "2026-11-06T18:33:12.824Z"
+    },
+    {
+      "id": "cmw5bblo9004i12eaa1ngrpvv",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbll2000i12eai29dgp05",
+      "createdAt": "2026-11-06T18:33:12.825Z"
+    },
+    {
+      "id": "cmw5bbloa004k12eawuwuhhxp",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbll4000j12eacdykv9gj",
+      "createdAt": "2026-11-06T18:33:12.826Z"
+    },
+    {
+      "id": "cmw5bblob004m12eax9bnbf8b",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbll5000k12eaabe0n1mb",
+      "createdAt": "2026-11-06T18:33:12.828Z"
+    },
+    {
+      "id": "cmw5bbloc004o12ea7ud2lucj",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbll6000l12ea2nr4b0ka",
+      "createdAt": "2026-11-06T18:33:12.829Z"
+    },
+    {
+      "id": "cmw5bblod004q12eaqge6jpkv",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbll8000m12eagxktzujx",
+      "createdAt": "2026-11-06T18:33:12.830Z"
+    },
+    {
+      "id": "cmw5bbloe004s12earebneclv",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbll9000n12eadcidqtrk",
+      "createdAt": "2026-11-06T18:33:12.831Z"
+    },
+    {
+      "id": "cmw5bblof004u12ea3t4icnn0",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbllb000o12ea01vuh3kg",
+      "createdAt": "2026-11-06T18:33:12.832Z"
+    },
+    {
+      "id": "cmw5bblog004w12eaqj83deci",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbllc000p12eaytznd8rf",
+      "createdAt": "2026-11-06T18:33:12.833Z"
+    },
+    {
+      "id": "cmw5bbloh004y12earve79ci9",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bblld000q12ea8qwstdrb",
+      "createdAt": "2026-11-06T18:33:12.834Z"
+    },
+    {
+      "id": "cmw5bbloi005012ea7d5i0je9",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bblle000r12ea9s1lj2dx",
+      "createdAt": "2026-11-06T18:33:12.835Z"
+    },
+    {
+      "id": "cmw5bblok005212eatkodpisy",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbllf000s12eaxwctr5cp",
+      "createdAt": "2026-11-06T18:33:12.836Z"
+    },
+    {
+      "id": "cmw5bblol005412ea4ap2cr0w",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmw5bbllh000t12ea69cmf3dy",
+      "createdAt": "2026-11-06T18:33:12.837Z"
+    },
+    {
+      "id": "cmw5bblom005612ea3z6fnw0x",
+      "roleId": "cmw5bblk9000312ear08sf3un",
+      "permissionId": "cmw5bblkd000412eaorez3sh1",
+      "createdAt": "2026-11-06T18:33:12.838Z"
+    },
+    {
+      "id": "cmw5bblon005812easc8kyi8k",
+      "roleId": "cmw5bblk9000312ear08sf3un",
+      "permissionId": "cmw5bblky000f12eaahasmnbw",
+      "createdAt": "2026-11-06T18:33:12.840Z"
+    },
+    {
+      "id": "cmw5bbloo005a12eafpc0ho8u",
+      "roleId": "cmw5bblk9000312ear08sf3un",
+      "permissionId": "cmw5bbll0000g12eaaob2ji1v",
+      "createdAt": "2026-11-06T18:33:12.841Z"
+    },
+    {
+      "id": "cmw5bbloq005c12ea0kzlz61b",
+      "roleId": "cmw5bblk9000312ear08sf3un",
+      "permissionId": "cmw5bbll1000h12ea4oqs7114",
+      "createdAt": "2026-11-06T18:33:12.843Z"
+    },
+    {
+      "id": "cmw5bblos005e12eal9tz9pn6",
+      "roleId": "cmw5bblk9000312ear08sf3un",
+      "permissionId": "cmw5bbll2000i12eai29dgp05",
+      "createdAt": "2026-11-06T18:33:12.844Z"
+    },
+    {
+      "id": "cmw5bblot005g12eaurucmc50",
+      "roleId": "cmw5bblk9000312ear08sf3un",
+      "permissionId": "cmw5bbll9000n12eadcidqtrk",
+      "createdAt": "2026-11-06T18:33:12.845Z"
+    },
+    {
+      "id": "cmw5bblou005i12eap1tgbyqg",
+      "roleId": "cmw5bblk9000312ear08sf3un",
+      "permissionId": "cmw5bbllb000o12ea01vuh3kg",
+      "createdAt": "2026-11-06T18:33:12.847Z"
+    },
+    {
+      "id": "cmw5bblov005k12eata186jlk",
+      "roleId": "cmw5bblk9000312ear08sf3un",
+      "permissionId": "cmw5bblle000r12ea9s1lj2dx",
+      "createdAt": "2026-11-06T18:33:12.848Z"
+    },
+    {
+      "id": "cmw5bblow005m12ea7q1noaz4",
+      "roleId": "cmw5bblk9000312ear08sf3un",
+      "permissionId": "cmw5bbllf000s12eaxwctr5cp",
+      "createdAt": "2026-11-06T18:33:12.849Z"
+    },
+    {
+      "id": "cmw5bbloy005o12ea74kkz1t8",
+      "roleId": "cmw5bblk9000312ear08sf3un",
+      "permissionId": "cmw5bbllh000t12ea69cmf3dy",
+      "createdAt": "2026-11-06T18:33:12.850Z"
+    },
+    {
+      "id": "cmwklgy3r001ptak3etg5hf2q",
+      "roleId": "cmw5bblju000012ea5rm191vs",
+      "permissionId": "cmwklgy2x000itak3x8g76l1z",
+      "createdAt": "2026-11-17T11:13:51.016Z"
+    },
+    {
+      "id": "cmwklgy4b0039tak3spbjyjqo",
+      "roleId": "cmw5bblk3000112ea055q4ng9",
+      "permissionId": "cmwklgy2x000itak3x8g76l1z",
+      "createdAt": "2026-11-17T11:13:51.036Z"
+    },
+    {
+      "id": "cmwklgy52004ntak3v8kf50t6",
+      "roleId": "cmw5bblk5000212ea0aegjiy7",
+      "permissionId": "cmwklgy2x000itak3x8g76l1z",
+      "createdAt": "2026-11-17T11:13:51.063Z"
+    },
+    {
+      "id": "cmwklgy5b005ltak35dwqwj5w",
+      "roleId": "cmw5bblk9000312ear08sf3un",
+      "permissionId": "cmwklgy2x000itak3x8g76l1z",
+      "createdAt": "2026-11-17T11:13:51.071Z"
+    }
+  ],
+  "navigationMenus": [
+    {
+      "id": "cmw5bbm1j005s12eaecvyoa0p",
+      "title": "Dashboard",
+      "key": "dashboard",
+      "path": "/dashboard",
+      "icon": "LayoutDashboard",
+      "parentId": null,
+      "sortOrder": 1,
+      "isActive": true,
+      "requiredPermission": "dashboard.view",
+      "createdAt": "2026-11-06T18:33:13.304Z",
+      "updatedAt": "2026-11-17T11:13:51.528Z"
+    },
+    {
+      "id": "cmw5bbm1m005u12ea1te4srli",
+      "title": "Management",
+      "key": "management",
+      "path": null,
+      "icon": "Briefcase",
+      "parentId": null,
+      "sortOrder": 2,
+      "isActive": true,
+      "requiredPermission": "management.view",
+      "createdAt": "2026-11-06T18:33:13.307Z",
+      "updatedAt": "2026-11-17T11:13:51.531Z"
+    },
+    {
+      "id": "cmw5bbm1o005w12eaw4d2e2tc",
+      "title": "Service",
+      "key": "service",
+      "path": null,
+      "icon": "Wrench",
+      "parentId": null,
+      "sortOrder": 3,
+      "isActive": true,
+      "requiredPermission": "service.view",
+      "createdAt": "2026-11-06T18:33:13.309Z",
+      "updatedAt": "2026-11-17T11:13:51.534Z"
+    },
+    {
+      "id": "cmw5bbm1u005y12eag5iua15f",
+      "title": "Customer",
+      "key": "customer",
+      "path": null,
+      "icon": "Users",
+      "parentId": null,
+      "sortOrder": 4,
+      "isActive": true,
+      "requiredPermission": "customer.view",
+      "createdAt": "2026-11-06T18:33:13.314Z",
+      "updatedAt": "2026-11-17T11:13:51.537Z"
+    },
+    {
+      "id": "cmw5bbm1w006012ea4xtpy1cy",
+      "title": "Settings",
+      "key": "settings",
+      "path": null,
+      "icon": "Settings",
+      "parentId": null,
+      "sortOrder": 6,
+      "isActive": true,
+      "requiredPermission": "settings.view",
+      "createdAt": "2026-11-06T18:33:13.316Z",
+      "updatedAt": "2026-11-17T11:13:51.543Z"
+    },
+    {
+      "id": "cmw5bbm1x006212eafh0p00br",
+      "title": "Income",
+      "key": "management-income",
+      "path": "/management/income",
+      "icon": "TrendingUp",
+      "parentId": "cmw5bbm1m005u12ea1te4srli",
+      "sortOrder": 1,
+      "isActive": true,
+      "requiredPermission": "management.income.view",
+      "createdAt": "2026-11-06T18:33:13.318Z",
+      "updatedAt": "2026-11-17T11:13:51.546Z"
+    },
+    {
+      "id": "cmw5bbm1z006412eahjgnt60r",
+      "title": "Expense",
+      "key": "management-expense",
+      "path": "/management/expense",
+      "icon": "TrendingDown",
+      "parentId": "cmw5bbm1m005u12ea1te4srli",
+      "sortOrder": 2,
+      "isActive": true,
+      "requiredPermission": "management.expense.view",
+      "createdAt": "2026-11-06T18:33:13.319Z",
+      "updatedAt": "2026-11-17T11:13:51.548Z"
+    },
+    {
+      "id": "cmw5bbm21006612ea2bsqbv09",
+      "title": "Salary",
+      "key": "management-salary",
+      "path": "/management/salary",
+      "icon": "DollarSign",
+      "parentId": "cmw5bbm1m005u12ea1te4srli",
+      "sortOrder": 3,
+      "isActive": true,
+      "requiredPermission": "management.salary.view",
+      "createdAt": "2026-11-06T18:33:13.321Z",
+      "updatedAt": "2026-11-17T11:13:51.551Z"
+    },
+    {
+      "id": "cmw5bbm23006812eaepiocebk",
+      "title": "Office Rent",
+      "key": "management-office-rent",
+      "path": "/management/office-rent",
+      "icon": "Building2",
+      "parentId": "cmw5bbm1m005u12ea1te4srli",
+      "sortOrder": 4,
+      "isActive": true,
+      "requiredPermission": "management.office-rent.view",
+      "createdAt": "2026-11-06T18:33:13.323Z",
+      "updatedAt": "2026-11-17T11:13:51.553Z"
+    },
+    {
+      "id": "cmw5bbm25006a12ea2milruzf",
+      "title": "TA/DA",
+      "key": "management-ta-da",
+      "path": "/management/ta-da",
+      "icon": "Compass",
+      "parentId": "cmw5bbm1m005u12ea1te4srli",
+      "sortOrder": 5,
+      "isActive": true,
+      "requiredPermission": "management.ta-da.view",
+      "createdAt": "2026-11-06T18:33:13.325Z",
+      "updatedAt": "2026-11-17T11:13:51.554Z"
+    },
+    {
+      "id": "cmw5bbm27006c12ealts6zeb6",
+      "title": "Others",
+      "key": "management-others",
+      "path": "/management/others",
+      "icon": "MoreHorizontal",
+      "parentId": "cmw5bbm1m005u12ea1te4srli",
+      "sortOrder": 6,
+      "isActive": true,
+      "requiredPermission": "management.others.view",
+      "createdAt": "2026-11-06T18:33:13.327Z",
+      "updatedAt": "2026-11-17T11:13:51.557Z"
+    },
+    {
+      "id": "cmw5bbm29006e12eanrbuhzuh",
+      "title": "Lab In",
+      "key": "service-lab-in",
+      "path": "/service/lab-in",
+      "icon": "ArrowDownLeft",
+      "parentId": "cmw5bbm1o005w12eaw4d2e2tc",
+      "sortOrder": 1,
+      "isActive": true,
+      "requiredPermission": "service.lab-in.view",
+      "createdAt": "2026-11-06T18:33:13.329Z",
+      "updatedAt": "2026-11-17T11:13:51.560Z"
+    },
+    {
+      "id": "cmw5bbm2b006g12ea0wn4ur5n",
+      "title": "Lab Out",
+      "key": "service-lab-out",
+      "path": "/service/lab-out",
+      "icon": "ArrowUpRight",
+      "parentId": "cmw5bbm1o005w12eaw4d2e2tc",
+      "sortOrder": 2,
+      "isActive": true,
+      "requiredPermission": "service.lab-out.view",
+      "createdAt": "2026-11-06T18:33:13.331Z",
+      "updatedAt": "2026-11-17T11:13:51.562Z"
+    },
+    {
+      "id": "cmw5bbm2c006i12eayt9k67h0",
+      "title": "Corporate",
+      "key": "customer-corporate",
+      "path": null,
+      "icon": "Building",
+      "parentId": "cmw5bbm1u005y12eag5iua15f",
+      "sortOrder": 1,
+      "isActive": true,
+      "requiredPermission": "customer.corporate.view",
+      "createdAt": "2026-11-06T18:33:13.333Z",
+      "updatedAt": "2026-11-17T11:13:51.565Z"
+    },
+    {
+      "id": "cmw5bbm2e006k12ea53qv5km5",
+      "title": "Non-Corporate",
+      "key": "customer-non-corporate",
+      "path": null,
+      "icon": "User",
+      "parentId": "cmw5bbm1u005y12eag5iua15f",
+      "sortOrder": 2,
+      "isActive": true,
+      "requiredPermission": "customer.non-corporate.view",
+      "createdAt": "2026-11-06T18:33:13.335Z",
+      "updatedAt": "2026-11-17T11:13:51.567Z"
+    },
+    {
+      "id": "cmw5bbm2g006m12ea4kkhv8xl",
+      "title": "Bill",
+      "key": "customer-corporate-bill",
+      "path": "/customer/corporate/bill",
+      "icon": "Receipt",
+      "parentId": "cmw5bbm2c006i12eayt9k67h0",
+      "sortOrder": 1,
+      "isActive": true,
+      "requiredPermission": "customer.corporate.bill.view",
+      "createdAt": "2026-11-06T18:33:13.336Z",
+      "updatedAt": "2026-11-17T11:13:51.569Z"
+    },
+    {
+      "id": "cmw5bbm2i006o12eaqs87fxkn",
+      "title": "Requisition",
+      "key": "customer-corporate-requisition",
+      "path": "/customer/corporate/requisition",
+      "icon": "ClipboardList",
+      "parentId": "cmw5bbm2c006i12eayt9k67h0",
+      "sortOrder": 2,
+      "isActive": true,
+      "requiredPermission": "customer.corporate.requisition.view",
+      "createdAt": "2026-11-06T18:33:13.339Z",
+      "updatedAt": "2026-11-17T11:13:51.572Z"
+    },
+    {
+      "id": "cmw5bbm2k006q12eaceo6vc5a",
+      "title": "Gate Pass",
+      "key": "customer-corporate-gate-pass",
+      "path": "/customer/corporate/gate-pass",
+      "icon": "KeyRound",
+      "parentId": "cmw5bbm2c006i12eayt9k67h0",
+      "sortOrder": 3,
+      "isActive": true,
+      "requiredPermission": "customer.corporate.gate-pass.view",
+      "createdAt": "2026-11-06T18:33:13.341Z",
+      "updatedAt": "2026-11-17T11:13:51.575Z"
+    },
+    {
+      "id": "cmw5bbm2n006s12eazfafutav",
+      "title": "Requisition",
+      "key": "customer-non-corporate-requisition",
+      "path": "/customer/non-corporate/requisition",
+      "icon": "FileText",
+      "parentId": "cmw5bbm2e006k12ea53qv5km5",
+      "sortOrder": 1,
+      "isActive": true,
+      "requiredPermission": "customer.non-corporate.requisition.view",
+      "createdAt": "2026-11-06T18:33:13.344Z",
+      "updatedAt": "2026-11-17T11:13:51.577Z"
+    },
+    {
+      "id": "cmw5bbm2q006u12ea9o3a7t8h",
+      "title": "Bill",
+      "key": "customer-non-corporate-bill",
+      "path": "/customer/non-corporate/bill",
+      "icon": "CreditCard",
+      "parentId": "cmw5bbm2e006k12ea53qv5km5",
+      "sortOrder": 2,
+      "isActive": true,
+      "requiredPermission": "customer.non-corporate.bill.view",
+      "createdAt": "2026-11-06T18:33:13.346Z",
+      "updatedAt": "2026-11-17T11:13:51.579Z"
+    },
+    {
+      "id": "cmw5bbm2s006w12eavm8bzogj",
+      "title": "Gate Pass",
+      "key": "customer-non-corporate-gate-pass",
+      "path": "/customer/non-corporate/gate-pass",
+      "icon": "Ticket",
+      "parentId": "cmw5bbm2e006k12ea53qv5km5",
+      "sortOrder": 3,
+      "isActive": true,
+      "requiredPermission": "customer.non-corporate.gate-pass.view",
+      "createdAt": "2026-11-06T18:33:13.348Z",
+      "updatedAt": "2026-11-17T11:13:51.582Z"
+    },
+    {
+      "id": "cmw5bbm2u006y12eakyh7b2wi",
+      "title": "Profile",
+      "key": "settings-profile",
+      "path": "/settings/profile",
+      "icon": "UserCheck",
+      "parentId": "cmw5bbm1w006012ea4xtpy1cy",
+      "sortOrder": 1,
+      "isActive": true,
+      "requiredPermission": "settings.profile.view",
+      "createdAt": "2026-11-06T18:33:13.350Z",
+      "updatedAt": "2026-11-17T11:13:51.584Z"
+    },
+    {
+      "id": "cmw5bbm2w007012eam8m1rd9t",
+      "title": "Change Password",
+      "key": "settings-change-password",
+      "path": "/settings/change-password",
+      "icon": "Lock",
+      "parentId": "cmw5bbm1w006012ea4xtpy1cy",
+      "sortOrder": 2,
+      "isActive": true,
+      "requiredPermission": "settings.change-password.view",
+      "createdAt": "2026-11-06T18:33:13.353Z",
+      "updatedAt": "2026-11-17T11:13:51.587Z"
+    },
+    {
+      "id": "cmw5bbm2y007212eappyyfn8k",
+      "title": "System Settings",
+      "key": "settings-system",
+      "path": "/settings/system",
+      "icon": "Sliders",
+      "parentId": "cmw5bbm1w006012ea4xtpy1cy",
+      "sortOrder": 3,
+      "isActive": true,
+      "requiredPermission": "settings.system.view",
+      "createdAt": "2026-11-06T18:33:13.355Z",
+      "updatedAt": "2026-11-17T11:13:51.589Z"
+    },
+    {
+      "id": "cmwklgyic0069tak369yka6dw",
+      "title": "Employee Management",
+      "key": "employee-management",
+      "path": "/employees",
+      "icon": "UserCheck",
+      "parentId": null,
+      "sortOrder": 5,
+      "isActive": true,
+      "requiredPermission": "employee.view",
+      "createdAt": "2026-11-17T11:13:51.540Z",
+      "updatedAt": "2026-11-17T11:13:51.540Z"
+    }
+  ],
+  "systemSettings": [],
+  "employees": [
+    {
+      "id": "cmwklmywv0001u5rqacofkjyz",
+      "employeeId": "EMP-001",
+      "name": "Engr. Tanvir Ahmed",
+      "email": "tanvir@oneservice.com",
+      "phone": "+880 1778-116244",
+      "designation": "Senior Biomedical Engineer",
+      "department": "Service & Maintenance",
+      "basicSalary": "35000",
+      "allowance": "5000",
+      "grossSalary": "40000",
+      "joinDate": "2024-01-15T00:00:00.000Z",
+      "status": "ACTIVE",
+      "address": "Plot 02, Road 12, DIT Project, Middle Badda, Dhaka",
+      "notes": "Expert in Chemistry Analyzer and Optical alignment.",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:18:31.999Z",
+      "updatedAt": "2026-11-17T11:18:31.999Z"
+    },
+    {
+      "id": "cmwklmyxg0003u5rq3zbxpzjn",
+      "employeeId": "EMP-002",
+      "name": "Md. Rafiqul Islam",
+      "email": "rafiqul@oneservice.com",
+      "phone": "+880 1540-081230",
+      "designation": "Senior Lab Technologist",
+      "department": "Diagnostic Lab Operations",
+      "basicSalary": "28000",
+      "allowance": "4000",
+      "grossSalary": "32000",
+      "joinDate": "2024-06-01T00:00:00.000Z",
+      "status": "ACTIVE",
+      "address": "House 45, Road 8, Rampura, Dhaka",
+      "notes": "Manages incoming diagnostic specimen calibration.",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:18:32.021Z",
+      "updatedAt": "2026-11-17T11:18:32.021Z"
+    },
+    {
+      "id": "cmwklmyxj0005u5rqul6za6fq",
+      "employeeId": "EMP-003",
+      "name": "Md. Kamrul Hasan",
+      "email": "kamrul@oneservice.com",
+      "phone": "+880 1715-998811",
+      "designation": "Store & Inventory Officer",
+      "department": "Inventory & Logistics",
+      "basicSalary": "22000",
+      "allowance": "3000",
+      "grossSalary": "25000",
+      "joinDate": "2025-02-10T00:00:00.000Z",
+      "status": "ACTIVE",
+      "address": "North Badda, Gulshan, Dhaka",
+      "notes": "Oversees Lab In & Lab Out parts stock movements.",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:18:32.023Z",
+      "updatedAt": "2026-11-17T11:18:32.023Z"
+    },
+    {
+      "id": "cmwklmyxl0007u5rqhub7a9rr",
+      "employeeId": "EMP-004",
+      "name": "Nasrin Akter",
+      "email": "nasrin@oneservice.com",
+      "phone": "+880 1822-445566",
+      "designation": "Customer Service Executive",
+      "department": "Customer Support",
+      "basicSalary": "20000",
+      "allowance": "2500",
+      "grossSalary": "22500",
+      "joinDate": "2025-05-01T00:00:00.000Z",
+      "status": "ACTIVE",
+      "address": "Niketan, Gulshan-1, Dhaka",
+      "notes": "Handles corporate client billing inquiries and appointments.",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:18:32.025Z",
+      "updatedAt": "2026-11-17T11:18:32.025Z"
+    },
+    {
+      "id": "cmwkm5o3700011330cpjnyuvg",
+      "employeeId": "7141",
+      "name": "Sagar Badsha",
+      "email": "sagar@oneservice.com",
+      "phone": null,
+      "designation": "Lead Engineer",
+      "department": "Biomedical",
+      "basicSalary": "20000",
+      "allowance": "500",
+      "grossSalary": "20500",
+      "joinDate": null,
+      "status": "ACTIVE",
+      "address": null,
+      "notes": null,
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:33:04.435Z",
+      "updatedAt": "2026-11-17T11:33:04.435Z"
+    },
+    {
+      "id": "cmwkm5o4700031330okl7gec5",
+      "employeeId": "7142",
+      "name": "MD Maher",
+      "email": "maher@oneservice.com",
+      "phone": null,
+      "designation": "Accounts & IT",
+      "department": "Office",
+      "basicSalary": "10000",
+      "allowance": "0",
+      "grossSalary": "10000",
+      "joinDate": null,
+      "status": "ACTIVE",
+      "address": null,
+      "notes": null,
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:33:04.471Z",
+      "updatedAt": "2026-11-17T11:33:04.471Z"
+    },
+    {
+      "id": "cmwkm5o4900051330nxbcsq0r",
+      "employeeId": "7143",
+      "name": "Biplob Chandra Shil",
+      "email": "biplob@oneservice.com",
+      "phone": null,
+      "designation": "Engineer",
+      "department": "Biomedical",
+      "basicSalary": "6000",
+      "allowance": "0",
+      "grossSalary": "6000",
+      "joinDate": null,
+      "status": "ACTIVE",
+      "address": null,
+      "notes": null,
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:33:04.473Z",
+      "updatedAt": "2026-11-17T11:33:04.473Z"
+    },
+    {
+      "id": "cmwkm5o4a00071330s94siiev",
+      "employeeId": "7144",
+      "name": "Benzir Ahmed",
+      "email": "benzir@oneservice.com",
+      "phone": null,
+      "designation": "Engineer",
+      "department": "Biomedical",
+      "basicSalary": "5000",
+      "allowance": "0",
+      "grossSalary": "5000",
+      "joinDate": null,
+      "status": "ACTIVE",
+      "address": null,
+      "notes": null,
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:33:04.475Z",
+      "updatedAt": "2026-11-17T11:33:04.475Z"
+    }
+  ],
+  "salaryRecords": [
+    {
+      "id": "cmwkm5o4c0009133028tiqd3t",
+      "month": "Jun 2026",
+      "employeeIdRef": "cmwkm5o3700011330cpjnyuvg",
+      "employeeName": "Sagar Badsha",
+      "employeeCode": "7141",
+      "designation": "Lead Engineer",
+      "department": "Biomedical",
+      "basicSalary": "20000",
+      "allowance": "500",
+      "totalDays": 30,
+      "presentDays": 28,
+      "absentDays": 2,
+      "totalEarnings": "18666",
+      "advanceLoan": "0",
+      "previousDue": "36500",
+      "netPayable": "18666",
+      "paidAmount": "0",
+      "dueAmount": "55166",
+      "paymentStatus": "UNPAID",
+      "paymentMethod": "Cash",
+      "paymentDate": null,
+      "notes": "Carried forward previous month due ৳36,500.",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:33:04.477Z",
+      "updatedAt": "2026-11-17T11:33:04.477Z"
+    },
+    {
+      "id": "cmwkm5o4e000b1330iw2qi4q7",
+      "month": "Jun 2026",
+      "employeeIdRef": "cmwkm5o4700031330okl7gec5",
+      "employeeName": "MD Maher",
+      "employeeCode": "7142",
+      "designation": "Accounts & IT",
+      "department": "Office",
+      "basicSalary": "10000",
+      "allowance": "0",
+      "totalDays": 30,
+      "presentDays": 26,
+      "absentDays": 4,
+      "totalEarnings": "8666",
+      "advanceLoan": "0",
+      "previousDue": "0",
+      "netPayable": "8666",
+      "paidAmount": "666",
+      "dueAmount": "8000",
+      "paymentStatus": "PARTIAL",
+      "paymentMethod": "Bank Transfer",
+      "paymentDate": "2026-06-05T00:00:00.000Z",
+      "notes": "Partial advance paid ৳666, balance ৳8,000 due.",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:33:04.479Z",
+      "updatedAt": "2026-11-17T11:33:04.479Z"
+    },
+    {
+      "id": "cmwkm5o4g000d1330t9c374sc",
+      "month": "Jun 2026",
+      "employeeIdRef": "cmwkm5o4900051330nxbcsq0r",
+      "employeeName": "Biplob Chandra Shil",
+      "employeeCode": "7143",
+      "designation": "Engineer",
+      "department": "Biomedical",
+      "basicSalary": "6000",
+      "allowance": "0",
+      "totalDays": 30,
+      "presentDays": 16,
+      "absentDays": 14,
+      "totalEarnings": "3200",
+      "advanceLoan": "550",
+      "previousDue": "0",
+      "netPayable": "2650",
+      "paidAmount": "2650",
+      "dueAmount": "0",
+      "paymentStatus": "PAID",
+      "paymentMethod": "Cash",
+      "paymentDate": "2026-06-05T00:00:00.000Z",
+      "notes": "Advance loan ৳550 deducted; net ৳2,650 fully settled.",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:33:04.480Z",
+      "updatedAt": "2026-11-17T11:33:04.480Z"
+    },
+    {
+      "id": "cmwkm5o4h000f1330l1lmuzko",
+      "month": "Jun 2026",
+      "employeeIdRef": "cmwkm5o4a00071330s94siiev",
+      "employeeName": "Benzir Ahmed",
+      "employeeCode": "7144",
+      "designation": "Engineer",
+      "department": "Biomedical",
+      "basicSalary": "5000",
+      "allowance": "0",
+      "totalDays": 30,
+      "presentDays": 22,
+      "absentDays": 8,
+      "totalEarnings": "3666",
+      "advanceLoan": "0",
+      "previousDue": "0",
+      "netPayable": "3666",
+      "paidAmount": "3666",
+      "dueAmount": "0",
+      "paymentStatus": "PAID",
+      "paymentMethod": "bKash",
+      "paymentDate": "2026-06-05T00:00:00.000Z",
+      "notes": "Disbursed via bKash personal wallet.",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:33:04.482Z",
+      "updatedAt": "2026-11-17T11:33:04.482Z"
+    },
+    {
+      "id": "cmwkx7nwr0001wm9sk11ppgnh",
+      "month": "Nov 2026",
+      "employeeIdRef": "cmwkm5o4900051330nxbcsq0r",
+      "employeeName": "Biplob Chandra Shil",
+      "employeeCode": "7143",
+      "designation": "Engineer",
+      "department": "Biomedical",
+      "basicSalary": "6000",
+      "allowance": "500",
+      "totalDays": 30,
+      "presentDays": 25,
+      "absentDays": 5,
+      "totalEarnings": "5500",
+      "advanceLoan": "0",
+      "previousDue": "500",
+      "netPayable": "5500",
+      "paidAmount": "4000",
+      "dueAmount": "2000",
+      "paymentStatus": "PARTIAL",
+      "paymentMethod": "Cash",
+      "paymentDate": "2026-11-17T00:00:00.000Z",
+      "notes": "test",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T16:42:33.290Z",
+      "updatedAt": "2026-11-17T16:42:33.290Z"
+    }
+  ],
+  "billVouchers": [
+    {
+      "id": "cmwkert0u00006kthfudclkyx",
+      "voucherNo": "BV-2026-0001",
+      "date": "2026-06-12T00:00:00.000Z",
+      "customerType": "CORPORATE",
+      "billType": "REPAIR",
+      "customerName": "Medilife Hospital & Diagnostic Complex",
+      "mobile": "01712-345678",
+      "address": "House #14, Road #07, Dhanmondi, Dhaka-1205",
+      "machineName": "Patient Monitor (BeneView Series)",
+      "brandModel": "Mindray BeneView T5",
+      "serialNo": "MN-9924-A1",
+      "department": "ICU / CCU",
+      "problemComplaint": "Power supply board malfunctioning & main display backlight flickering.",
+      "receivedDate": "2026-06-10T00:00:00.000Z",
+      "partsTotal": "23000",
+      "serviceCharge": "10000",
+      "discount": "0",
+      "grandTotal": "33000",
+      "paidAmount": "33000",
+      "dueAmount": "0",
+      "amountInWords": "Thirty-Three Thousand Only",
+      "warrantyTerms": "1 year Panel Service Warranty",
+      "paymentStatus": "PAID",
+      "paymentMethod": "BANK",
+      "paymentMethodOther": null,
+      "preparedBy": "Engr. Sagor Badsha",
+      "createdById": null,
+      "createdAt": "2026-11-17T08:06:20.334Z",
+      "updatedAt": "2026-11-17T09:28:16.351Z",
+      "items": [
+        {
+          "id": "cmwkert0u00016kthg15nts90",
+          "voucherId": "cmwkert0u00006kthfudclkyx",
+          "sl": 1,
+          "description": "Main SMPS Power Supply Board Replacement",
+          "qty": "1",
+          "unitPrice": "18000",
+          "amount": "18000",
+          "remarks": "Original OEM Board"
+        },
+        {
+          "id": "cmwkert0u00026kthv28s8947",
+          "voucherId": "cmwkert0u00006kthfudclkyx",
+          "sl": 2,
+          "description": "High Voltage Inverter & Capacitor Kit",
+          "qty": "2",
+          "unitPrice": "2500",
+          "amount": "5000",
+          "remarks": "Replaced with 105°C rating"
+        }
+      ]
+    },
+    {
+      "id": "cmwkert1b00036kthji2p4kv1",
+      "voucherNo": "BV-2026-0002",
+      "date": "2026-06-15T00:00:00.000Z",
+      "customerType": "CORPORATE",
+      "billType": "BOTH",
+      "customerName": "FitZone Gym & Wellness Center",
+      "mobile": "01844-998822",
+      "address": "Plot 45, Gulshan-2, Dhaka",
+      "machineName": "Commercial AC Motor Treadmill",
+      "brandModel": "Shua SH-5918 Heavy Duty",
+      "serialNo": "SH-8841-2023",
+      "department": "Cardio Section",
+      "problemComplaint": "Running belt torn, roller bearing noise & inverter error E-02.",
+      "receivedDate": "2026-06-13T00:00:00.000Z",
+      "partsTotal": "14500",
+      "serviceCharge": "3500",
+      "discount": "500",
+      "grandTotal": "17500",
+      "paidAmount": "10000",
+      "dueAmount": "7500",
+      "amountInWords": "Seventeen Thousand Five Hundred Taka Only",
+      "warrantyTerms": "6 months running belt warranty",
+      "paymentStatus": "PARTIAL",
+      "paymentMethod": "BKASH",
+      "paymentMethodOther": null,
+      "preparedBy": "Engr. Sagor Badsha",
+      "createdById": null,
+      "createdAt": "2026-11-17T08:06:20.352Z",
+      "updatedAt": "2026-11-17T08:06:20.352Z",
+      "items": [
+        {
+          "id": "cmwkert1b00046kthn5sh7zaa",
+          "voucherId": "cmwkert1b00036kthji2p4kv1",
+          "sl": 1,
+          "description": "Commercial Multi-ply Treadmill Running Belt (3.2mm)",
+          "qty": "1",
+          "unitPrice": "8500",
+          "amount": "8500",
+          "remarks": "Anti-static coated"
+        },
+        {
+          "id": "cmwkert1b00056kthgpcm5v7l",
+          "voucherId": "cmwkert1b00036kthji2p4kv1",
+          "sl": 2,
+          "description": "Heavy Duty Front & Rear Roller Bearings (NSK Japan)",
+          "qty": "2",
+          "unitPrice": "2000",
+          "amount": "4000",
+          "remarks": "Pair replaced"
+        },
+        {
+          "id": "cmwkert1b00066kth4t1uaopg",
+          "voucherId": "cmwkert1b00036kthji2p4kv1",
+          "sl": 3,
+          "description": "Optocoupler Sensor & Inverter Calibration",
+          "qty": "1",
+          "unitPrice": "2000",
+          "amount": "2000",
+          "remarks": "Speed sensor adjusted"
+        }
+      ]
+    },
+    {
+      "id": "cmwkert1d00076kthzps6m9fr",
+      "voucherNo": "BV-2026-0003",
+      "date": "2026-06-16T00:00:00.000Z",
+      "customerType": "NON_CORPORATE",
+      "billType": "SERVICE",
+      "customerName": "Dr. Rafiqul Islam (Islam Dental Care)",
+      "mobile": "01911-552233",
+      "address": "Mirpur-10, Dhaka",
+      "machineName": "Dental Autoclave Sterilizer (Class B)",
+      "brandModel": "Runyes SEA-23L-B-LED",
+      "serialNo": "RY-2022-771",
+      "department": "Sterilization Room",
+      "problemComplaint": "Pressure build-up failure and door seal gasket leaking steam.",
+      "receivedDate": "2026-06-14T00:00:00.000Z",
+      "partsTotal": "4500",
+      "serviceCharge": "3500",
+      "discount": "0",
+      "grandTotal": "8000",
+      "paidAmount": "8000",
+      "dueAmount": "0",
+      "amountInWords": "Eight Thousand Taka Only",
+      "warrantyTerms": "3 months seal gasket warranty",
+      "paymentStatus": "PAID",
+      "paymentMethod": "CASH",
+      "paymentMethodOther": null,
+      "preparedBy": "Engr. Sagor Badsha",
+      "createdById": null,
+      "createdAt": "2026-11-17T08:06:20.354Z",
+      "updatedAt": "2026-11-17T08:06:20.354Z",
+      "items": [
+        {
+          "id": "cmwkert1d00086kthtov548qw",
+          "voucherId": "cmwkert1d00076kthzps6m9fr",
+          "sl": 1,
+          "description": "Medical Grade Silicone Door Seal Gasket 23L",
+          "qty": "1",
+          "unitPrice": "3500",
+          "amount": "3500",
+          "remarks": "Autoclave resistant"
+        },
+        {
+          "id": "cmwkert1d00096kth9vn1pexm",
+          "voucherId": "cmwkert1d00076kthzps6m9fr",
+          "sl": 2,
+          "description": "Solenoid Release Valve O-Ring Kit",
+          "qty": "1",
+          "unitPrice": "1000",
+          "amount": "1000",
+          "remarks": "Replaced & tested at 134°C"
+        }
+      ]
+    },
+    {
+      "id": "cmwkhxas10002sgrpmn66eqkb",
+      "voucherNo": "BV-2026-0004",
+      "date": "2026-11-17T00:00:00.000Z",
+      "customerType": "NON_CORPORATE",
+      "billType": "SERVICE",
+      "customerName": "Nayon Coders",
+      "mobile": "01814569747",
+      "address": "Nadmulla, Bhandaria, Pirojpur 8550",
+      "machineName": "Testing",
+      "brandModel": "Test",
+      "serialNo": "Test",
+      "department": "Lab",
+      "problemComplaint": null,
+      "receivedDate": "2026-11-18T00:00:00.000Z",
+      "partsTotal": "11650",
+      "serviceCharge": "1500",
+      "discount": "2500",
+      "grandTotal": "10650",
+      "paidAmount": "10050",
+      "dueAmount": "600",
+      "amountInWords": "Ten Thousand Six Hundred Fifty Taka Only",
+      "warrantyTerms": "1 year Panel Service Warranty",
+      "paymentStatus": "PARTIAL",
+      "paymentMethod": "BKASH",
+      "paymentMethodOther": null,
+      "preparedBy": "Engr. Sagor Badsha",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T09:34:35.470Z",
+      "updatedAt": "2026-11-17T09:34:35.470Z",
+      "items": [
+        {
+          "id": "cmwkhxas10003sgrpjg6okjag",
+          "voucherId": "cmwkhxas10002sgrpmn66eqkb",
+          "sl": 1,
+          "description": "Test",
+          "qty": "10",
+          "unitPrice": "450",
+          "amount": "4500",
+          "remarks": "Test"
+        },
+        {
+          "id": "cmwkhxas10004sgrp7gzinl90",
+          "voucherId": "cmwkhxas10002sgrpmn66eqkb",
+          "sl": 2,
+          "description": "Test 2",
+          "qty": "13",
+          "unitPrice": "550",
+          "amount": "7150",
+          "remarks": "test 2"
+        }
+      ]
+    },
+    {
+      "id": "cmwngr7wr00017v74gosw1cwk",
+      "voucherNo": "BV-2026-0005",
+      "date": "2026-11-19T00:00:00.000Z",
+      "customerType": "NON_CORPORATE",
+      "billType": "SERVICE",
+      "customerName": "Nayon Coders",
+      "mobile": "01814569747",
+      "address": "Nadmulla, Bhandaria, Pirojpur 8550",
+      "machineName": "df",
+      "brandModel": "dafs",
+      "serialNo": "adf",
+      "department": "adfs",
+      "problemComplaint": "dfas",
+      "receivedDate": "2026-12-03T00:00:00.000Z",
+      "partsTotal": "10",
+      "serviceCharge": "0",
+      "discount": "0",
+      "grandTotal": "10",
+      "paidAmount": "10",
+      "dueAmount": "0",
+      "amountInWords": "Ten Taka Only",
+      "warrantyTerms": "1 year Panel Service Warranty",
+      "paymentStatus": "PAID",
+      "paymentMethod": "CASH",
+      "paymentMethodOther": null,
+      "preparedBy": "Engr. Sagor Badsha",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-19T11:25:10.730Z",
+      "updatedAt": "2026-11-19T11:25:10.730Z",
+      "items": [
+        {
+          "id": "cmwngr7wr00027v74phliseal",
+          "voucherId": "cmwngr7wr00017v74gosw1cwk",
+          "sl": 1,
+          "description": "adsfsd",
+          "qty": "1",
+          "unitPrice": "10",
+          "amount": "10",
+          "remarks": null
+        }
+      ]
+    }
+  ],
+  "requisitions": [
+    {
+      "id": "cmwkhycag0000vukmsq4jtabc",
+      "estimateNo": "RCE-2026-0001",
+      "date": "2026-06-18T00:00:00.000Z",
+      "validUpTo": "2026-07-18T00:00:00.000Z",
+      "customerType": "CORPORATE",
+      "organizationName": "Popular Diagnostic Center Ltd. (Shantinagar)",
+      "departmentWard": "Biochemistry & Pathology Lab",
+      "contactPerson": "Dr. Anwarul Haque (Lab Director)",
+      "contactNo": "01715-998811",
+      "equipmentName": "Fully Automated Chemistry Analyzer",
+      "brand": "Mindray",
+      "model": "BS-240",
+      "serialNo": "BS-88390-D",
+      "faultDescription": "Photometer optical sensor deviation, reagent sample probe clogged & peristaltic pump pressure failure.",
+      "sparePartsTotal": "18500",
+      "serviceLabourTotal": "6500",
+      "subTotal": "25000",
+      "discount": "1000",
+      "grandTotal": "24000",
+      "status": "APPROVED",
+      "preparedBy": "1 Service & Repair Technology.",
+      "clientApprovalNote": "Approved by Dr. Anwarul Haque for procurement & service.",
+      "createdById": null,
+      "createdAt": "2026-11-17T09:35:24.088Z",
+      "updatedAt": "2026-11-17T09:35:24.088Z",
+      "items": [
+        {
+          "id": "cmwkhycah0001vukmcz8bb80b",
+          "requisitionId": "cmwkhycag0000vukmsq4jtabc",
+          "category": "SPARE_PARTS",
+          "sl": 1,
+          "description": "Sample & Reagent Probe Assembly (Titanium Coated)",
+          "qty": "1",
+          "unitPrice": "8500",
+          "totalPrice": "8500",
+          "remarks": "Repairable"
+        },
+        {
+          "id": "cmwkhycah0002vukmpyyndddn",
+          "requisitionId": "cmwkhycag0000vukmsq4jtabc",
+          "category": "SPARE_PARTS",
+          "sl": 2,
+          "description": "Optical Filter & Halogen Lamp 12V 20W",
+          "qty": "1",
+          "unitPrice": "5000",
+          "totalPrice": "5000",
+          "remarks": "OEM Part"
+        },
+        {
+          "id": "cmwkhycah0003vukm0mjwi82x",
+          "requisitionId": "cmwkhycag0000vukmsq4jtabc",
+          "category": "SPARE_PARTS",
+          "sl": 3,
+          "description": "Peristaltic Pump Tubing Kit (Silicon)",
+          "qty": "2",
+          "unitPrice": "2500",
+          "totalPrice": "5000",
+          "remarks": "Imported"
+        },
+        {
+          "id": "cmwkhycah0004vukm4fvyt61s",
+          "requisitionId": "cmwkhycag0000vukmsq4jtabc",
+          "category": "SERVICE_LABOUR",
+          "sl": 1,
+          "description": "Complete Optical System Calibration & Probe Alignment Service",
+          "qty": "1",
+          "unitPrice": "6500",
+          "totalPrice": "6500",
+          "remarks": "Service Charge"
+        }
+      ]
+    },
+    {
+      "id": "cmwkhycba0005vukm1kt48lnk",
+      "estimateNo": "RCE-2026-0002",
+      "date": "2026-06-20T00:00:00.000Z",
+      "validUpTo": "2026-07-20T00:00:00.000Z",
+      "customerType": "CORPORATE",
+      "organizationName": "Labaid Specialized Hospital (Dhanmondi)",
+      "departmentWard": "Coronary Care Unit (CCU)",
+      "contactPerson": "Engr. Mizanur Rahman (Biomedical Engr.)",
+      "contactNo": "01819-445566",
+      "equipmentName": "Multi-parameter Patient Monitor with Defibrillator",
+      "brand": "Philips",
+      "model": "IntelliVue MP50",
+      "serialNo": "PH-MP50-449",
+      "faultDescription": "ECG channel lead-off error, NIBP module cuff inflation failure & internal lithium backup battery dead.",
+      "sparePartsTotal": "29000",
+      "serviceLabourTotal": "5000",
+      "subTotal": "34000",
+      "discount": "0",
+      "grandTotal": "34000",
+      "status": "PENDING",
+      "preparedBy": "1 Service & Repair Technology.",
+      "clientApprovalNote": null,
+      "createdById": null,
+      "createdAt": "2026-11-17T09:35:24.119Z",
+      "updatedAt": "2026-11-17T09:35:24.119Z",
+      "items": [
+        {
+          "id": "cmwkhycba0006vukm72yvhvn7",
+          "requisitionId": "cmwkhycba0005vukm1kt48lnk",
+          "category": "SPARE_PARTS",
+          "sl": 1,
+          "description": "NIBP Air Pump & Exhaust Solenoid Valve Module",
+          "qty": "1",
+          "unitPrice": "16000",
+          "totalPrice": "16000",
+          "remarks": "Repairable"
+        },
+        {
+          "id": "cmwkhycba0007vukmn7c5mg2a",
+          "requisitionId": "cmwkhycba0005vukm1kt48lnk",
+          "category": "SPARE_PARTS",
+          "sl": 2,
+          "description": "Internal Rechargeable Medical Battery Pack (10.8V Li-ion)",
+          "qty": "1",
+          "unitPrice": "9500",
+          "totalPrice": "9500",
+          "remarks": "Original Philips"
+        },
+        {
+          "id": "cmwkhycba0008vukmt24sb5bg",
+          "requisitionId": "cmwkhycba0005vukm1kt48lnk",
+          "category": "SPARE_PARTS",
+          "sl": 3,
+          "description": "5-Lead ECG Trunk Cable & Leadwire Set",
+          "qty": "1",
+          "unitPrice": "3500",
+          "totalPrice": "3500",
+          "remarks": "OEM Leadwire"
+        },
+        {
+          "id": "cmwkhycba0009vukmc4kyduce",
+          "requisitionId": "cmwkhycba0005vukm1kt48lnk",
+          "category": "SERVICE_LABOUR",
+          "sl": 1,
+          "description": "NIBP Pressure Transducer Calibration & PCB Overhaul",
+          "qty": "1",
+          "unitPrice": "5000",
+          "totalPrice": "5000",
+          "remarks": "Labour Service"
+        }
+      ]
+    },
+    {
+      "id": "cmwkhycbg000avukm77emidl7",
+      "estimateNo": "RCE-2026-0003",
+      "date": "2026-06-21T00:00:00.000Z",
+      "validUpTo": "2026-07-21T00:00:00.000Z",
+      "customerType": "NON_CORPORATE",
+      "organizationName": "Dr. Shahin Dental Surgery (Uttara Sector 7)",
+      "departmentWard": "Dental Operatory 1",
+      "contactPerson": "Dr. Shahinur Rahman",
+      "contactNo": "01912-887766",
+      "equipmentName": "Dental Chair Hydraulic & Compressor Unit",
+      "brand": "Sirona (Dentsply)",
+      "model": "Intego Pro",
+      "serialNo": "SR-2021-99",
+      "faultDescription": "Hydraulic lift valve leaking oil, foot controller switch unresponsive.",
+      "sparePartsTotal": "12000",
+      "serviceLabourTotal": "4000",
+      "subTotal": "16000",
+      "discount": "500",
+      "grandTotal": "15500",
+      "status": "APPROVED",
+      "preparedBy": "1 Service & Repair Technology.",
+      "clientApprovalNote": null,
+      "createdById": null,
+      "createdAt": "2026-11-17T09:35:24.125Z",
+      "updatedAt": "2026-11-17T09:35:24.125Z",
+      "items": [
+        {
+          "id": "cmwkhycbg000bvukmh1cgngal",
+          "requisitionId": "cmwkhycbg000avukm77emidl7",
+          "category": "SPARE_PARTS",
+          "sl": 1,
+          "description": "High Pressure Hydraulic Valve & Seal Gasket Kit",
+          "qty": "1",
+          "unitPrice": "8500",
+          "totalPrice": "8500",
+          "remarks": "Repairable"
+        },
+        {
+          "id": "cmwkhycbg000cvukm8nr5su8l",
+          "requisitionId": "cmwkhycbg000avukm77emidl7",
+          "category": "SPARE_PARTS",
+          "sl": 2,
+          "description": "Pneumatic Multi-Function Foot Pedal Microswitch",
+          "qty": "1",
+          "unitPrice": "3500",
+          "totalPrice": "3500",
+          "remarks": "Replaced"
+        },
+        {
+          "id": "cmwkhycbg000dvukmwofkbbmy",
+          "requisitionId": "cmwkhycbg000avukm77emidl7",
+          "category": "SERVICE_LABOUR",
+          "sl": 1,
+          "description": "Hydraulic Pump Flushing, Oil Refill & Re-alignment",
+          "qty": "1",
+          "unitPrice": "4000",
+          "totalPrice": "4000",
+          "remarks": "Labour Service"
+        }
+      ]
+    }
+  ],
+  "gatePasses": [
+    {
+      "id": "cmwkjekqb0000f8bc219r56xh",
+      "passNo": "OSRT/GP/2026-0001",
+      "date": "2026-06-18T00:00:00.000Z",
+      "customerType": "CORPORATE",
+      "passType": "RETURNABLE",
+      "challanKind": "RECEIVING",
+      "referenceWorkOrderNo": "WO-PDC-2026-8819",
+      "gatePassCategory": "মেরামতের জন্য মেশিন গ্রহণ",
+      "organizationName": "Popular Diagnostic Center Ltd. (Shantinagar)",
+      "departmentWard": "Biochemistry & Pathology Lab",
+      "address": "Plot 02, Road 05, Shantinagar, Dhaka-1217",
+      "contactPerson": "Dr. Anwarul Haque (Lab Director)",
+      "contactNo": "01715-998811",
+      "machineName": "Fully Automated Chemistry Analyzer",
+      "quantity": 1,
+      "brandManufacturer": "Mindray",
+      "modelNo": "BS-240",
+      "serialNo": "BS-88390-D",
+      "assetIdNo": "AST-PDC-0442",
+      "accessoriesReceived": "Main Titanium Sample Probe, Power Cord, Communication Cable",
+      "machineCondition": "অচল",
+      "reportedProblem": "Photometer optical sensor deviation, reagent sample probe clogged & peristaltic pump pressure failure.",
+      "physicalDamageCondition": "External body intact, minor surface scratches, optical housing sealed.",
+      "destination": "1 Service & Repair Technology Workshop, Badda",
+      "vehicleNo": "Dhaka Metro-GA 11-4022",
+      "carrierName": "Md. Rafiqul Islam (Senior Dispatcher)",
+      "deliveredBy": "Md. Kamrul Hasan (Store Officer, Popular Diagnostic)",
+      "designationStaffId": "Store Officer (EMP-992)",
+      "transportPurpose": "মেরামত",
+      "purpose": "Lab equipment workshop overhaul and photometer repair",
+      "expectedReturnDate": "2026-06-28T00:00:00.000Z",
+      "returnDate": null,
+      "serviceReportNo": null,
+      "returnCondition": null,
+      "workDoneComments": null,
+      "returnedAccessories": null,
+      "pendingIssuesAdvice": null,
+      "status": "APPROVED",
+      "preparedBy": "1 Service & Repair Technology.",
+      "authorizedBy": "Engr. Sagor Badsha (Chief Engineer)",
+      "receivedBy": "Md. Rafiqul Islam (Senior Dispatcher)",
+      "createdById": null,
+      "createdAt": "2026-11-17T10:16:01.139Z",
+      "updatedAt": "2026-11-17T10:16:01.139Z",
+      "items": [
+        {
+          "id": "cmwkjekqc0001f8bcqsoh1ott",
+          "gatePassId": "cmwkjekqb0000f8bc219r56xh",
+          "sl": 1,
+          "description": "Mindray BS-240 Fully Automated Chemistry Analyzer Unit",
+          "qty": "1",
+          "serialNo": "BS-88390-D",
+          "remarks": "Clogged sample probe & optical sensor fault"
+        }
+      ]
+    },
+    {
+      "id": "cmwkjekqn0002f8bctoagwo1x",
+      "passNo": "OSRT/GP/2026-0002",
+      "date": "2026-06-28T00:00:00.000Z",
+      "customerType": "CORPORATE",
+      "passType": "RETURNABLE",
+      "challanKind": "RETURN",
+      "referenceWorkOrderNo": "WO-PDC-2026-8819",
+      "gatePassCategory": null,
+      "organizationName": "Popular Diagnostic Center Ltd. (Shantinagar)",
+      "departmentWard": "Biochemistry & Pathology Lab",
+      "address": "Plot 02, Road 05, Shantinagar, Dhaka-1217",
+      "contactPerson": "Dr. Anwarul Haque (Lab Director)",
+      "contactNo": "01715-998811",
+      "machineName": "Fully Automated Chemistry Analyzer (Mindray BS-240)",
+      "quantity": 1,
+      "brandManufacturer": "Mindray",
+      "modelNo": "BS-240",
+      "serialNo": "BS-88390-D",
+      "assetIdNo": null,
+      "accessoriesReceived": null,
+      "machineCondition": null,
+      "reportedProblem": null,
+      "physicalDamageCondition": null,
+      "destination": "Popular Diagnostic Center Ltd., Shantinagar",
+      "vehicleNo": "Dhaka Metro-GA 11-4022",
+      "carrierName": "Md. Rafiqul Islam",
+      "deliveredBy": "Md. Rafiqul Islam (1 Service & Repair Tech)",
+      "designationStaffId": null,
+      "transportPurpose": "ফেরত",
+      "purpose": null,
+      "expectedReturnDate": null,
+      "returnDate": "2026-06-28T00:00:00.000Z",
+      "serviceReportNo": "SR-2026-0041",
+      "returnCondition": "মেরামত ও পরীক্ষা সম্পন্ন",
+      "workDoneComments": "Photometer optical sensor calibrated, titanium sample probe replaced, peristaltic tubing overhauled. Full QC testing passed.",
+      "returnedAccessories": "Main Unit, Replacement Probe Assembly, Original Power Cord, Calibration Certificate.",
+      "pendingIssuesAdvice": "Operate with constant online UPS and 24°C room temperature.",
+      "status": "COMPLETED",
+      "preparedBy": "1 Service & Repair Technology.",
+      "authorizedBy": "Engr. Sagor Badsha (Chief Engineer)",
+      "receivedBy": "Dr. Anwarul Haque",
+      "createdById": null,
+      "createdAt": "2026-11-17T10:16:01.152Z",
+      "updatedAt": "2026-11-17T10:16:01.152Z",
+      "items": [
+        {
+          "id": "cmwkjekqn0003f8bcqgypkmj1",
+          "gatePassId": "cmwkjekqn0002f8bctoagwo1x",
+          "sl": 1,
+          "description": "Mindray BS-240 Chemistry Analyzer (Repaired & Tested)",
+          "qty": "1",
+          "serialNo": "BS-88390-D",
+          "remarks": "QC Passed - 1 Year Panel Service Warranty"
+        }
+      ]
+    },
+    {
+      "id": "cmwkjekqr0004f8bcg22gdsu3",
+      "passNo": "OSRT/GP/2026-0003",
+      "date": "2026-06-25T00:00:00.000Z",
+      "customerType": "NON_CORPORATE",
+      "passType": "RETURNABLE",
+      "challanKind": "RECEIVING",
+      "referenceWorkOrderNo": "CLI-MR-2026",
+      "gatePassCategory": "মেরামতের জন্য মেশিন গ্রহণ",
+      "organizationName": "Dr. Mahbubur Rahman Dental & Orthopedic Chamber",
+      "departmentWard": "OPD Chamber 4",
+      "address": "House 14, Road 5, Dhanmondi, Dhaka",
+      "contactPerson": "Dr. Mahbubur Rahman",
+      "contactNo": "01912-887766",
+      "machineName": "Woodpecker Ultrasonic Dental Scaler",
+      "quantity": 1,
+      "brandManufacturer": "Woodpecker Guilin",
+      "modelNo": "UDS-J",
+      "serialNo": "WDP-UDS-88210",
+      "assetIdNo": "DENT-08",
+      "accessoriesReceived": "Handpiece, Footswitch, Water Pipe, Power Adapter",
+      "machineCondition": "অচল",
+      "reportedProblem": "No ultrasonic vibration output, transducer overheating error.",
+      "physicalDamageCondition": "Handpiece cable connector loose, transducer housing normal.",
+      "destination": "1 Service & Repair Technology Workshop, Badda",
+      "vehicleNo": "Courier / Motorbike (Reg: Dhaka Metro-HA 33-1289)",
+      "carrierName": "Abdul Karim",
+      "deliveredBy": "Abdul Karim (Chamber Assistant)",
+      "designationStaffId": null,
+      "transportPurpose": "মেরামত",
+      "purpose": "Transducer coil rewinding and circuit diagnosis",
+      "expectedReturnDate": "2026-07-02T00:00:00.000Z",
+      "returnDate": null,
+      "serviceReportNo": null,
+      "returnCondition": null,
+      "workDoneComments": null,
+      "returnedAccessories": null,
+      "pendingIssuesAdvice": null,
+      "status": "APPROVED",
+      "preparedBy": "1 Service & Repair Technology.",
+      "authorizedBy": "Engr. Sagor Badsha (Chief Engineer)",
+      "receivedBy": "Engr. Sagor Badsha",
+      "createdById": null,
+      "createdAt": "2026-11-17T10:16:01.155Z",
+      "updatedAt": "2026-11-17T10:16:01.155Z",
+      "items": [
+        {
+          "id": "cmwkjekqr0005f8bcdzqh78u8",
+          "gatePassId": "cmwkjekqr0004f8bcg22gdsu3",
+          "sl": 1,
+          "description": "Woodpecker UDS-J Ultrasonic Dental Scaler Unit",
+          "qty": "1",
+          "serialNo": "WDP-UDS-88210",
+          "remarks": "Defective ultrasonic transducer"
+        }
+      ]
+    },
+    {
+      "id": "cmwkjekqu0006f8bcdp5wi6rb",
+      "passNo": "OSRT/GP/2026-0004",
+      "date": "2026-07-02T00:00:00.000Z",
+      "customerType": "NON_CORPORATE",
+      "passType": "RETURNABLE",
+      "challanKind": "RETURN",
+      "referenceWorkOrderNo": "CLI-MR-2026",
+      "gatePassCategory": null,
+      "organizationName": "Dr. Mahbubur Rahman Dental & Orthopedic Chamber",
+      "departmentWard": "OPD Chamber 4",
+      "address": "House 14, Road 5, Dhanmondi, Dhaka",
+      "contactPerson": "Dr. Mahbubur Rahman",
+      "contactNo": "01912-887766",
+      "machineName": "Woodpecker Ultrasonic Dental Scaler (UDS-J)",
+      "quantity": 1,
+      "brandManufacturer": "Woodpecker Guilin",
+      "modelNo": "UDS-J",
+      "serialNo": "WDP-UDS-88210",
+      "assetIdNo": null,
+      "accessoriesReceived": null,
+      "machineCondition": null,
+      "reportedProblem": null,
+      "physicalDamageCondition": null,
+      "destination": "House 14, Road 5, Dhanmondi, Dhaka",
+      "vehicleNo": "Dhaka Metro-HA 33-1289",
+      "carrierName": "Md. Sumon Ahmed",
+      "deliveredBy": "Md. Sumon Ahmed (1 Service & Repair Tech)",
+      "designationStaffId": null,
+      "transportPurpose": "ফেরত",
+      "purpose": null,
+      "expectedReturnDate": null,
+      "returnDate": "2026-07-02T00:00:00.000Z",
+      "serviceReportNo": "SR-2026-0072",
+      "returnCondition": "মেরামত ও পরীক্ষা সম্পন্ন",
+      "workDoneComments": "Piezoelectric transducer re-aligned, cable connector replaced, scaling frequency tuned at 28kHz.",
+      "returnedAccessories": "Main Unit, Handpiece, Footswitch, Power Adapter, Water Pipe.",
+      "pendingIssuesAdvice": "Avoid pulling handpiece cable abruptly during dental procedures.",
+      "status": "COMPLETED",
+      "preparedBy": "1 Service & Repair Technology.",
+      "authorizedBy": "Engr. Sagor Badsha (Chief Engineer)",
+      "receivedBy": "Dr. Mahbubur Rahman",
+      "createdById": null,
+      "createdAt": "2026-11-17T10:16:01.159Z",
+      "updatedAt": "2026-11-17T10:16:01.159Z",
+      "items": [
+        {
+          "id": "cmwkjekqu0007f8bcs2c693ue",
+          "gatePassId": "cmwkjekqu0006f8bcdp5wi6rb",
+          "sl": 1,
+          "description": "Woodpecker UDS-J Dental Scaler (Repaired & Delivered)",
+          "qty": "1",
+          "serialNo": "WDP-UDS-88210",
+          "remarks": "6 Months Service Warranty"
+        }
+      ]
+    }
+  ],
+  "incomes": [
+    {
+      "id": "cmwkahorw0001usqshc3e1ohy",
+      "date": "2026-04-28T00:00:00.000Z",
+      "companyOrStoreName": "ট্রেড মিল সার্ভিস",
+      "amount": "2500",
+      "status": "PAID",
+      "remarks": "বাসা সার্ভিসিং ও ফিটিং",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T06:06:29.805Z",
+      "updatedAt": "2026-11-17T06:06:29.805Z"
+    },
+    {
+      "id": "cmwkahorz0003usqsogmlgdvt",
+      "date": "2026-04-29T00:00:00.000Z",
+      "companyOrStoreName": "এক্সার সাইজ বাইক",
+      "amount": "1950",
+      "status": "PAID",
+      "remarks": "বেল্ট ও প্যাডেল রিপ্লেসমেন্ট",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T06:06:29.807Z",
+      "updatedAt": "2026-11-17T06:06:29.807Z"
+    },
+    {
+      "id": "cmwkahos10005usqsrxyjzxse",
+      "date": "2026-04-30T00:00:00.000Z",
+      "companyOrStoreName": "সি.সি.ক্যমেরা",
+      "amount": "1500",
+      "status": "UNPAID",
+      "remarks": "দোকান ক্যামেরা সেটআপ (বকেয়া)",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T06:06:29.809Z",
+      "updatedAt": "2026-11-17T06:06:29.809Z"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "cmwkatjvl0001i91s6ecqugyq",
+      "date": "2026-06-01T00:00:00.000Z",
+      "companyOrStoreName": "পানি বিল",
+      "amount": "100",
+      "status": "PAID",
+      "category": "Utilities",
+      "remarks": "জুন মাসের খাবার পানির বিল",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T06:15:43.329Z",
+      "updatedAt": "2026-11-17T06:15:43.329Z"
+    },
+    {
+      "id": "cmwkatjvn0003i91s1ng2hom8",
+      "date": "2026-06-05T00:00:00.000Z",
+      "companyOrStoreName": "ওয়াইফাই বিল",
+      "amount": "530",
+      "status": "PAID",
+      "category": "Office Expenses",
+      "remarks": "ইন্টারনেট কানেকশন চার্জ",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T06:15:43.332Z",
+      "updatedAt": "2026-11-17T06:15:43.332Z"
+    },
+    {
+      "id": "cmwkatjvo0005i91sbt12y3et",
+      "date": "2026-06-24T00:00:00.000Z",
+      "companyOrStoreName": "ট্রেডমিল বেল্ট",
+      "amount": "8500",
+      "status": "PAID",
+      "category": "Spare Parts",
+      "remarks": "ট্রেডমিল পার্টস সাপ্লায়ার বিল (বকেয়া)",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T06:15:43.333Z",
+      "updatedAt": "2026-11-17T07:03:53.512Z"
+    }
+  ],
+  "officeRents": [
+    {
+      "id": "cmwkkgxh000014tvp2vnvg45b",
+      "month": "May 2026",
+      "title": "Office rent",
+      "amount": "35000",
+      "status": "PAID",
+      "paymentDate": "2026-05-05T00:00:00.000Z",
+      "paymentMethod": "Bank Transfer",
+      "landlordName": "Al-Haj Abdul Latif (Premise Owner)",
+      "receiptNo": "RENT-REC-2026-05",
+      "note": "Plot No 02, Road No 12, DIT Project, Middle Badda office premises.",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T10:45:50.580Z",
+      "updatedAt": "2026-11-17T10:45:50.580Z"
+    },
+    {
+      "id": "cmwkkgxhl00034tvp93v8468f",
+      "month": "June 2026",
+      "title": "Office rent",
+      "amount": "35000",
+      "status": "PAID",
+      "paymentDate": "2026-06-03T00:00:00.000Z",
+      "paymentMethod": "Cheque",
+      "landlordName": "Al-Haj Abdul Latif (Premise Owner)",
+      "receiptNo": "RENT-REC-2026-06",
+      "note": "Paid via City Bank cheque #CB-7749102.",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T10:45:50.602Z",
+      "updatedAt": "2026-11-17T10:45:50.602Z"
+    },
+    {
+      "id": "cmwkkgxhn00054tvpx41gl3p2",
+      "month": "July 2026",
+      "title": "Office rent",
+      "amount": "35000",
+      "status": "PAID",
+      "paymentDate": "2026-11-17T00:00:00.000Z",
+      "paymentMethod": null,
+      "landlordName": "Al-Haj Abdul Latif (Premise Owner)",
+      "receiptNo": null,
+      "note": "Current monthly office space rental invoice due.",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T10:45:50.603Z",
+      "updatedAt": "2026-11-17T11:21:57.718Z"
+    },
+    {
+      "id": "cmwklqqt20001pchfm9q060el",
+      "month": "November 2026",
+      "title": "Office rent",
+      "amount": "35000",
+      "status": "PAID",
+      "paymentDate": "2026-11-03T00:00:00.000Z",
+      "paymentMethod": "Cash",
+      "landlordName": "Al-Haj Abdul Latif (Premise Owner)",
+      "receiptNo": null,
+      "note": null,
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:21:28.118Z",
+      "updatedAt": "2026-11-17T11:21:28.118Z"
+    }
+  ],
+  "taDaBills": [
+    {
+      "id": "cmwkjw0wh0000142idusdsg1h",
+      "billNo": "TADA-2026-0001",
+      "submissionDate": "2026-06-15T00:00:00.000Z",
+      "employeeName": "Engr. Tanvir Ahmed",
+      "designation": "Senior Biomedical Service Engineer",
+      "employeeId": "EMP-102",
+      "department": "Biomedical Service & Field Support",
+      "totalAmount": "1850",
+      "status": "APPROVED",
+      "receivedBy": "Engr. Sagor Badsha",
+      "checkedBy": "Md. Al-Amin (Accounts)",
+      "approvedBy": "Engr. Sagor Badsha (Chief Engineer)",
+      "remarks": "Hospital emergency repair visit for Mindray Chemistry Analyzer.",
+      "createdById": null,
+      "createdAt": "2026-11-17T10:29:35.249Z",
+      "updatedAt": "2026-11-17T10:29:35.249Z",
+      "items": [
+        {
+          "id": "cmwkjw0wh0001142iu9gii0v2",
+          "taDaBillId": "cmwkjw0wh0000142idusdsg1h",
+          "sl": 1,
+          "date": "2026-06-10T00:00:00.000Z",
+          "particular": "Workshop (Badda) to Popular Diagnostic Shantinagar (Sensor replacement visit)",
+          "vehicleName": "CNG Auto",
+          "qty": "1",
+          "unitTaka": "350",
+          "totalTaka": "350",
+          "checkedBy": "Admin"
+        },
+        {
+          "id": "cmwkjw0wh0002142ipoh3znif",
+          "taDaBillId": "cmwkjw0wh0000142idusdsg1h",
+          "sl": 2,
+          "date": "2026-06-10T00:00:00.000Z",
+          "particular": "Field Technical Lunch Allowance (Full Day Service)",
+          "vehicleName": "N/A",
+          "qty": "1",
+          "unitTaka": "250",
+          "totalTaka": "250",
+          "checkedBy": "Admin"
+        },
+        {
+          "id": "cmwkjw0wh0003142is7wsd6st",
+          "taDaBillId": "cmwkjw0wh0000142idusdsg1h",
+          "sl": 3,
+          "date": "2026-06-12T00:00:00.000Z",
+          "particular": "Badda to Square Hospital Panthapath (Patient Monitor SMPS checking)",
+          "vehicleName": "Uber Moto",
+          "qty": "1",
+          "unitTaka": "220",
+          "totalTaka": "220",
+          "checkedBy": "Admin"
+        },
+        {
+          "id": "cmwkjw0wh0004142iv2mtyf4l",
+          "taDaBillId": "cmwkjw0wh0000142idusdsg1h",
+          "sl": 4,
+          "date": "2026-06-12T00:00:00.000Z",
+          "particular": "Square Hospital to National Heart Foundation Mirpur",
+          "vehicleName": "CNG Auto",
+          "qty": "1",
+          "unitTaka": "400",
+          "totalTaka": "400",
+          "checkedBy": "Admin"
+        },
+        {
+          "id": "cmwkjw0wh0005142ih5qcqkrv",
+          "taDaBillId": "cmwkjw0wh0000142idusdsg1h",
+          "sl": 5,
+          "date": "2026-06-13T00:00:00.000Z",
+          "particular": "Return from Mirpur to Workshop with heavy calibrator kit",
+          "vehicleName": "CNG Auto",
+          "qty": "1",
+          "unitTaka": "380",
+          "totalTaka": "380",
+          "checkedBy": "Admin"
+        },
+        {
+          "id": "cmwkjw0wh0006142i074r0zqn",
+          "taDaBillId": "cmwkjw0wh0000142idusdsg1h",
+          "sl": 6,
+          "date": "2026-06-13T00:00:00.000Z",
+          "particular": "Evening Field Refreshment Allowance",
+          "vehicleName": "N/A",
+          "qty": "1",
+          "unitTaka": "250",
+          "totalTaka": "250",
+          "checkedBy": "Admin"
+        }
+      ]
+    },
+    {
+      "id": "cmwkjw0x10007142ivbz9ac0l",
+      "billNo": "TADA-2026-0002",
+      "submissionDate": "2026-06-18T00:00:00.000Z",
+      "employeeName": "Md. Rafiqul Islam",
+      "designation": "Logistics & Dispatch Officer",
+      "employeeId": "EMP-104",
+      "department": "Logistics & Material Transport",
+      "totalAmount": "1100",
+      "status": "PAID",
+      "receivedBy": "Engr. Sagor Badsha",
+      "checkedBy": "Md. Al-Amin (Accounts)",
+      "approvedBy": "Engr. Sagor Badsha",
+      "remarks": "Machine gate pass collection & spare parts delivery conveyance.",
+      "createdById": null,
+      "createdAt": "2026-11-17T10:29:35.269Z",
+      "updatedAt": "2026-11-17T10:29:35.269Z",
+      "items": [
+        {
+          "id": "cmwkjw0x10008142i3nx6bae2",
+          "taDaBillId": "cmwkjw0x10007142ivbz9ac0l",
+          "sl": 1,
+          "date": "2026-06-16T00:00:00.000Z",
+          "particular": "Workshop to Nawabpur electronics market for SMPS components & transistors",
+          "vehicleName": "Bus & Rickshaw",
+          "qty": "2",
+          "unitTaka": "150",
+          "totalTaka": "300",
+          "checkedBy": "Admin"
+        },
+        {
+          "id": "cmwkjw0x10009142im4nzh1b2",
+          "taDaBillId": "cmwkjw0x10007142ivbz9ac0l",
+          "sl": 2,
+          "date": "2026-06-17T00:00:00.000Z",
+          "particular": "Emergency sample delivery to Popular Diagnostic Center Unit 2",
+          "vehicleName": "Rickshaw",
+          "qty": "1",
+          "unitTaka": "180",
+          "totalTaka": "180",
+          "checkedBy": "Admin"
+        },
+        {
+          "id": "cmwkjw0x1000a142ikhpdim19",
+          "taDaBillId": "cmwkjw0x10007142ivbz9ac0l",
+          "sl": 3,
+          "date": "2026-06-17T00:00:00.000Z",
+          "particular": "Transport of standby dental scaler to Dr. Mahbubur Rahman chamber Dhanmondi",
+          "vehicleName": "CNG Auto",
+          "qty": "1",
+          "unitTaka": "420",
+          "totalTaka": "420",
+          "checkedBy": "Admin"
+        },
+        {
+          "id": "cmwkjw0x1000b142i0j0lpaa5",
+          "taDaBillId": "cmwkjw0x10007142ivbz9ac0l",
+          "sl": 4,
+          "date": "2026-06-17T00:00:00.000Z",
+          "particular": "Daily Conveyance & Lunch Allowance",
+          "vehicleName": "N/A",
+          "qty": "1",
+          "unitTaka": "200",
+          "totalTaka": "200",
+          "checkedBy": "Admin"
+        }
+      ]
+    },
+    {
+      "id": "cmwkjw0x3000c142i226g4s51",
+      "billNo": "TADA-2026-0003",
+      "submissionDate": "2026-06-20T00:00:00.000Z",
+      "employeeName": "Md. Kamrul Hasan",
+      "designation": "Assistant Electronics Technician",
+      "employeeId": "EMP-108",
+      "department": "Workshop Maintenance",
+      "totalAmount": "650",
+      "status": "PENDING",
+      "receivedBy": "Engr. Sagor Badsha",
+      "checkedBy": null,
+      "approvedBy": null,
+      "remarks": "Courier collection and soldering consumable procurement.",
+      "createdById": null,
+      "createdAt": "2026-11-17T10:29:35.272Z",
+      "updatedAt": "2026-11-17T10:29:35.272Z",
+      "items": [
+        {
+          "id": "cmwkjw0x3000d142i59p01j8r",
+          "taDaBillId": "cmwkjw0x3000c142i226g4s51",
+          "sl": 1,
+          "date": "2026-06-19T00:00:00.000Z",
+          "particular": "Workshop to Sundarban Courier Motijheel branch (Collect imported probe package)",
+          "vehicleName": "Bus / Rickshaw",
+          "qty": "1",
+          "unitTaka": "250",
+          "totalTaka": "250",
+          "checkedBy": "Admin"
+        },
+        {
+          "id": "cmwkjw0x3000e142ibri2giul",
+          "taDaBillId": "cmwkjw0x3000c142i226g4s51",
+          "sl": 2,
+          "date": "2026-06-19T00:00:00.000Z",
+          "particular": "Stadium market for medical thermal paste & copper wire",
+          "vehicleName": "Rickshaw",
+          "qty": "1",
+          "unitTaka": "200",
+          "totalTaka": "200",
+          "checkedBy": "Admin"
+        },
+        {
+          "id": "cmwkjw0x3000f142ifo2e7iqa",
+          "taDaBillId": "cmwkjw0x3000c142i226g4s51",
+          "sl": 3,
+          "date": "2026-06-19T00:00:00.000Z",
+          "particular": "Lunch & Tiffin Allowance",
+          "vehicleName": "N/A",
+          "qty": "1",
+          "unitTaka": "200",
+          "totalTaka": "200",
+          "checkedBy": "Admin"
+        }
+      ]
+    },
+    {
+      "id": "cmwklsnlq0003pchfo7vm2jsc",
+      "billNo": "TADA-2026-0004",
+      "submissionDate": "2026-11-17T00:00:00.000Z",
+      "employeeName": "Nayon",
+      "designation": "Softwaer Enginer",
+      "employeeId": "3424324",
+      "department": "Service & Maintenance",
+      "totalAmount": "900",
+      "status": "PAID",
+      "receivedBy": "1 Service & Repair Technology",
+      "checkedBy": "Md. Al-Amin (Accounts)",
+      "approvedBy": "Engr. Sagor Badsha (Chief Engineer)",
+      "remarks": "Test",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T11:22:57.278Z",
+      "updatedAt": "2026-11-17T11:22:57.278Z",
+      "items": [
+        {
+          "id": "cmwklsnlq0004pchfnpfypck1",
+          "taDaBillId": "cmwklsnlq0003pchfo7vm2jsc",
+          "sl": 1,
+          "date": "2026-11-17T00:00:00.000Z",
+          "particular": "test",
+          "vehicleName": "CNG Auto",
+          "qty": "90",
+          "unitTaka": "10",
+          "totalTaka": "900",
+          "checkedBy": "Admin"
+        }
+      ]
+    }
+  ],
+  "labParts": [
+    {
+      "id": "cmwkkuhpb0000bt1nceburob3",
+      "name": "Halogen Lamp 12V 20W",
+      "partNumber": "HL-12V-20W",
+      "unit": "pcs",
+      "unitPrice": "5000",
+      "stockQuantity": "5",
+      "totalInQuantity": "10",
+      "totalOutQuantity": "5",
+      "createdAt": "2026-11-17T10:56:23.327Z",
+      "updatedAt": "2026-11-17T10:56:23.327Z"
+    },
+    {
+      "id": "cmwkkuhpj0005bt1n3qgc670k",
+      "name": "Peristaltic Pump Tubing Kit (Silicon)",
+      "partNumber": "PPT-SIL-02",
+      "unit": "set",
+      "unitPrice": "2500",
+      "stockQuantity": "5",
+      "totalInQuantity": "8",
+      "totalOutQuantity": "3",
+      "createdAt": "2026-11-17T10:56:23.336Z",
+      "updatedAt": "2026-11-17T10:56:23.336Z"
+    },
+    {
+      "id": "cmwkkuhpn000abt1nqnsapjxw",
+      "name": "Sample Probe Assembly (Titanium Coated)",
+      "partNumber": "SPA-TIT-01",
+      "unit": "pcs",
+      "unitPrice": "8500",
+      "stockQuantity": "4",
+      "totalInQuantity": "5",
+      "totalOutQuantity": "1",
+      "createdAt": "2026-11-17T10:56:23.339Z",
+      "updatedAt": "2026-11-17T10:56:23.339Z"
+    },
+    {
+      "id": "cmwkl5d9n0001eek8z5nibucr",
+      "name": "Test Optical Flow Sensor",
+      "partNumber": null,
+      "unit": "pcs",
+      "unitPrice": "1500",
+      "stockQuantity": "0",
+      "totalInQuantity": "0",
+      "totalOutQuantity": "0",
+      "createdAt": "2026-11-17T11:04:50.796Z",
+      "updatedAt": "2026-11-17T11:04:50.859Z"
+    }
+  ],
+  "labIns": [
+    {
+      "id": "cmwkkuhpf0002bt1n0xhe94s9",
+      "date": "2026-06-01T00:00:00.000Z",
+      "partId": "cmwkkuhpb0000bt1nceburob3",
+      "partsName": "Halogen Lamp 12V 20W",
+      "quantity": "10",
+      "unitPrice": "5000",
+      "totalPrice": "50000",
+      "supplier": "MedTech Optical Importers Ltd.",
+      "invoiceNo": "PINV-2026-081",
+      "remarks": "OEM Biochemistry analyzer light source lamps",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T10:56:23.331Z",
+      "updatedAt": "2026-11-17T10:56:23.331Z"
+    },
+    {
+      "id": "cmwkkuhpl0007bt1nlnejqxr3",
+      "date": "2026-06-02T00:00:00.000Z",
+      "partId": "cmwkkuhpj0005bt1n3qgc670k",
+      "partsName": "Peristaltic Pump Tubing Kit (Silicon)",
+      "quantity": "8",
+      "unitPrice": "2500",
+      "totalPrice": "20000",
+      "supplier": "BioLab Accessories Dhaka",
+      "invoiceNo": "PINV-2026-092",
+      "remarks": "High durability peristaltic tubing sets",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T10:56:23.337Z",
+      "updatedAt": "2026-11-17T10:56:23.337Z"
+    },
+    {
+      "id": "cmwkkuhpo000cbt1njf7eto3b",
+      "date": "2026-06-04T00:00:00.000Z",
+      "partId": "cmwkkuhpn000abt1nqnsapjxw",
+      "partsName": "Sample Probe Assembly (Titanium Coated)",
+      "quantity": "5",
+      "unitPrice": "8500",
+      "totalPrice": "42500",
+      "supplier": "MedTech Optical Importers Ltd.",
+      "invoiceNo": "PINV-2026-104",
+      "remarks": "Precision titanium reagent sample probes",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T10:56:23.341Z",
+      "updatedAt": "2026-11-17T10:56:23.341Z"
+    }
+  ],
+  "labOuts": [
+    {
+      "id": "cmwkkuhph0004bt1nhjpa4vc6",
+      "date": "2026-06-05T00:00:00.000Z",
+      "partId": "cmwkkuhpb0000bt1nceburob3",
+      "partsName": "Halogen Lamp 12V 20W",
+      "quantity": "5",
+      "unitPrice": "5000",
+      "totalPrice": "25000",
+      "dispatchedTo": "Popular Diagnostic Center (Shantinagar)",
+      "referenceNo": "RCE-2026-0001",
+      "remarks": "Installed during optical calibration service",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T10:56:23.334Z",
+      "updatedAt": "2026-11-17T10:56:23.334Z"
+    },
+    {
+      "id": "cmwkkuhpm0009bt1n23dmsck6",
+      "date": "2026-06-08T00:00:00.000Z",
+      "partId": "cmwkkuhpj0005bt1n3qgc670k",
+      "partsName": "Peristaltic Pump Tubing Kit (Silicon)",
+      "quantity": "3",
+      "unitPrice": "2500",
+      "totalPrice": "7500",
+      "dispatchedTo": "Labaid Specialized Hospital (Dhanmondi)",
+      "referenceNo": "SRV-2026-0034",
+      "remarks": "Replaced degraded peristaltic lines",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T10:56:23.338Z",
+      "updatedAt": "2026-11-17T10:56:23.338Z"
+    },
+    {
+      "id": "cmwkkuhpq000ebt1nw9c92csd",
+      "date": "2026-06-10T00:00:00.000Z",
+      "partId": "cmwkkuhpn000abt1nqnsapjxw",
+      "partsName": "Sample Probe Assembly (Titanium Coated)",
+      "quantity": "1",
+      "unitPrice": "8500",
+      "totalPrice": "8500",
+      "dispatchedTo": "Ibn Sina Hospital (Badda)",
+      "referenceNo": "SRV-2026-0041",
+      "remarks": "Direct replacement for bent probe tip",
+      "createdById": "cmw5acq0w00009newdrpjsmdo",
+      "createdAt": "2026-11-17T10:56:23.342Z",
+      "updatedAt": "2026-11-17T10:56:23.342Z"
+    }
+  ]
+}
