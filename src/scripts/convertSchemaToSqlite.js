@@ -45,3 +45,4 @@ content = content.replace(/\n{3,}/g, '\n\n');
 
 fs.writeFileSync(schemaPath, content, 'utf8');
 console.log('Successfully converted backend/prisma/schema.prisma to SQLite format');
+

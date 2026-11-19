@@ -41,3 +41,4 @@ stringDefaults.forEach((val) => {
 
 fs.writeFileSync(schemaPath, content, 'utf8');
 console.log('Successfully quoted string defaults in backend/prisma/schema.prisma');
+
