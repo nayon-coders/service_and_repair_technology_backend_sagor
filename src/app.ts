@@ -18,10 +18,20 @@ app.use(
       // Allow requests with no origin (like mobile apps, curl, or server-to-server)
       if (!origin) return callback(null, true);
 
-      const allowedOrigins = [env.frontendUrl, 'http://localhost:5173', 'http://127.0.0.1:5173'];
+      const allowedOrigins = [
+        env.frontendUrl,
+        'http://localhost:5173',
+        'http://127.0.0.1:5173',
+        'http://localhost:5000',
+        'http://127.0.0.1:5000',
+      ];
       if (
         allowedOrigins.includes(origin) ||
         origin.endsWith('.vercel.app') ||
+        origin.startsWith('http://localhost:') ||
+        origin.startsWith('http://127.0.0.1:') ||
+        origin.startsWith('app://') ||
+        origin.startsWith('file://') ||
         env.nodeEnv === 'development'
       ) {
         return callback(null, true);

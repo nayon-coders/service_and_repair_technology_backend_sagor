@@ -6,9 +6,9 @@ const startServer = async (): Promise<void> => {
   // Test and connect database
   await connectDatabase();
 
-  const server = app.listen(env.port, () => {
+  const server = app.listen(env.port, '0.0.0.0', () => {
     console.log(`🚀 Business Management Server running in [${env.nodeEnv}] mode on port ${env.port}`);
-    console.log(`🔗 Health check available at: http://localhost:${env.port}/api/v1/health`);
+    console.log(`🔗 Health check available at: http://127.0.0.1:${env.port}/api/v1/health`);
   });
 
   // Graceful shutdown
