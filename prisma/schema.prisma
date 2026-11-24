@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -521,7 +521,7 @@ model SalaryRecord {
   @@index([department])
   @@index([paymentStatus])
   @@index([createdById])
-  @@index([employeeIdRef], map: "salary_records_employee_id_ref_fkey")
+  @@index([employeeIdRef])
   @@map("salary_records")
 }
 

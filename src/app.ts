@@ -8,9 +8,29 @@ import { requestLogger } from './middleware/logger';
 import { notFoundHandler } from './middleware/notFoundHandler';
 import { errorHandler } from './middleware/errorHandler';
 import { licenseMiddleware } from './middleware/licenseMiddleware';
+import { prisma } from './config/prisma';
 import apiRoutes from './routes';
 
 const app: Application = express();
+
+// Auto-seed initial admin and permissions if database is empty on first boot
+let isDbInitialized = false;
+app.use(async (_req, _res, next) => {
+  if (!isDbInitialized) {
+    try {
+      const userCount = await prisma.user.count();
+      if (userCount === 0) {
+        console.log('🌱 Database is empty, auto-seeding initial data...');
+        const { seedDatabase } = await import('./scripts/seedDatabase');
+        await seedDatabase();
+      }
+      isDbInitialized = true;
+    } catch {
+      // Ignore if database connection is pending
+    }
+  }
+  next();
+});
 
 // Security and CORS middleware
 app.use(

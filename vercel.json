@@ -1,8 +1,6 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "prisma generate && prisma db push --accept-data-loss && tsc",
   "outputDirectory": "dist",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
   "framework": null,
   "rewrites": [
     {
