@@ -17,9 +17,9 @@ if (process.env.NODE_ENV !== 'production') {
 export const connectDatabase = async (): Promise<void> => {
   try {
     await prisma.$connect();
-    console.log('✅ SQLite Local Database connected successfully via Prisma');
+    console.log('✅ MySQL Database connected successfully via Prisma');
   } catch (error) {
-    console.error('❌ Failed to connect to SQLite database:', error);
+    console.error('❌ Failed to connect to MySQL database:', error);
     process.exit(1);
   }
 };
