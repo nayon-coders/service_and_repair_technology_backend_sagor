@@ -1,11 +1,9 @@
 {
-  "buildCommand": "prisma generate && prisma db push --accept-data-loss && tsc",
-  "outputDirectory": "dist",
-  "framework": null,
+  "version": 2,
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/api/index"
+      "destination": "/api"
     }
   ]
 }
