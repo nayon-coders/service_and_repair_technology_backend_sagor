@@ -7,6 +7,7 @@ import { env } from './config/environment';
 import { requestLogger } from './middleware/logger';
 import { notFoundHandler } from './middleware/notFoundHandler';
 import { errorHandler } from './middleware/errorHandler';
+import { licenseMiddleware } from './middleware/licenseMiddleware';
 import apiRoutes from './routes';
 
 const app: Application = express();
@@ -51,6 +52,9 @@ app.use(cookieParser());
 
 // Request logging middleware
 app.use(requestLogger);
+
+// License suspension validation
+app.use('/api/v1', licenseMiddleware);
 
 // API route registration
 app.use('/api/v1', apiRoutes);

@@ -14,8 +14,12 @@ import employeeRoutes from './employeeRoutes';
 import voucherRoutes from './voucherRoutes';
 import requisitionRoutes from './requisitionRoutes';
 import gatePassRoutes from './gatePassRoutes';
+import licenseRoutes from './licenseRoutes';
 
 const router = Router();
+
+// License control endpoints
+router.use('/license', licenseRoutes);
 
 // Health check endpoint
 router.use('/health', healthRoutes);
