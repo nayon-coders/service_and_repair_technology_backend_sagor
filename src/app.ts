@@ -13,20 +13,24 @@ import apiRoutes from './routes';
 
 const app: Application = express();
 
-// Auto-seed initial admin and permissions if database is empty on first boot
+// Auto-seed initial admin and sync navigation menus on boot
 let isDbInitialized = false;
 app.use(async (_req, _res, next) => {
   if (!isDbInitialized) {
     try {
+      const problemTemplatesMenu = await prisma.navigationMenu.findUnique({
+        where: { key: 'settings-problem-templates' },
+      });
       const userCount = await prisma.user.count();
-      if (userCount === 0) {
-        console.log('🌱 Database is empty, auto-seeding initial data...');
+
+      if (userCount === 0 || !problemTemplatesMenu) {
+        console.log('🌱 Syncing navigation menus and database seeds...');
         const { seedDatabase } = await import('./scripts/seedDatabase');
         await seedDatabase();
       }
       isDbInitialized = true;
-    } catch {
-      // Ignore if database connection is pending
+    } catch (err) {
+      console.warn('DB initialization check error:', err);
     }
   }
   next();
