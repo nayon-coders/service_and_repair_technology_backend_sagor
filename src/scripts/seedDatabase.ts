@@ -454,6 +454,7 @@ export const seedDatabase = async (): Promise<void> => {
     { key: 'settings-profile', title: 'Profile', path: '/settings/profile', icon: 'UserCheck', sortOrder: 1, requiredPermission: 'settings.profile.view' },
     { key: 'settings-change-password', title: 'Change Password', path: '/settings/change-password', icon: 'Lock', sortOrder: 2, requiredPermission: 'settings.change-password.view' },
     { key: 'settings-system', title: 'System Settings', path: '/settings/system', icon: 'Sliders', sortOrder: 3, requiredPermission: 'settings.system.view' },
+    { key: 'settings-problem-templates', title: 'Problem Templates', path: '/settings/problem-templates', icon: 'AlertCircle', sortOrder: 4, requiredPermission: 'settings.view' },
   ];
   for (const m of settingsChildren) {
     const item = await prisma.navigationMenu.upsert({

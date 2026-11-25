@@ -15,6 +15,7 @@ import voucherRoutes from './voucherRoutes';
 import requisitionRoutes from './requisitionRoutes';
 import gatePassRoutes from './gatePassRoutes';
 import licenseRoutes from './licenseRoutes';
+import templateRoutes from './templateRoutes';
 
 const router = Router();
 
@@ -53,5 +54,8 @@ router.use('/employees', employeeRoutes);
 router.use('/billing/vouchers', voucherRoutes);
 router.use('/billing/requisitions', requisitionRoutes);
 router.use('/billing/gate-passes', gatePassRoutes);
+
+// System Settings & Problem Templates endpoints
+router.use('/settings/templates', templateRoutes);
 
 export default router;
