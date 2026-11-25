@@ -419,8 +419,8 @@ export const seedDatabase = async (): Promise<void> => {
 
   // Level 2: Children of Non-Corporate
   const nonCorporateChildren = [
-    { key: 'customer-non-corporate-requisition', title: 'Requisition', path: '/customer/non-corporate/requisition', icon: 'FileText', sortOrder: 1, requiredPermission: 'customer.non-corporate.requisition.view' },
-    { key: 'customer-non-corporate-bill', title: 'Bill', path: '/customer/non-corporate/bill', icon: 'CreditCard', sortOrder: 2, requiredPermission: 'customer.non-corporate.bill.view' },
+    { key: 'customer-non-corporate-bill', title: 'Bill', path: '/customer/non-corporate/bill', icon: 'CreditCard', sortOrder: 1, requiredPermission: 'customer.non-corporate.bill.view' },
+    { key: 'customer-non-corporate-requisition', title: 'Requisition', path: '/customer/non-corporate/requisition', icon: 'FileText', sortOrder: 2, requiredPermission: 'customer.non-corporate.requisition.view' },
     { key: 'customer-non-corporate-gate-pass', title: 'Gate Pass', path: '/customer/non-corporate/gate-pass', icon: 'Ticket', sortOrder: 3, requiredPermission: 'customer.non-corporate.gate-pass.view' },
   ];
   for (const m of nonCorporateChildren) {
